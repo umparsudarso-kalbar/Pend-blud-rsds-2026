@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,19 +18,30 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
-body{
-background:#f4f7fb;
-color:#1f2937;
-line-height:1.6;
+html{
+scroll-behavior:smooth;
 }
+
+body{
+background:#eef4fa;
+color:#1d2939;
+}
+
+/* ================= HEADER ================= */
 
 header{
 
-background:linear-gradient(135deg,#004c99,#0b6edc);
+position:fixed;
 
-color:white;
+top:0;
 
-padding:20px 8%;
+left:0;
+
+width:100%;
+
+background:#0B5ED7;
+
+padding:18px 8%;
 
 display:flex;
 
@@ -37,31 +49,35 @@ justify-content:space-between;
 
 align-items:center;
 
-position:sticky;
-
-top:0;
-
 z-index:999;
 
-box-shadow:0 3px 10px rgba(0,0,0,.15);
+box-shadow:0 5px 20px rgba(0,0,0,.12);
 
 }
 
 .logo{
 
-font-size:24px;
+font-size:22px;
 
 font-weight:700;
+
+color:white;
+
+}
+
+nav{
+
+display:flex;
+
+gap:28px;
 
 }
 
 nav a{
 
-color:white;
-
 text-decoration:none;
 
-margin-left:25px;
+color:white;
 
 font-weight:500;
 
@@ -75,27 +91,37 @@ opacity:.8;
 
 }
 
+/* ================= HERO ================= */
+
 .hero{
 
-padding:80px 8%;
+padding-top:140px;
+
+padding-bottom:90px;
+
+padding-left:8%;
+
+padding-right:8%;
+
+background:linear-gradient(135deg,#0B5ED7,#0A3D91);
+
+color:white;
 
 display:grid;
 
-grid-template-columns:1fr 1fr;
+grid-template-columns:1.2fr .8fr;
 
 align-items:center;
 
-gap:60px;
-
-background:linear-gradient(180deg,#eaf4ff,#ffffff);
+gap:40px;
 
 }
 
 .hero h1{
 
-font-size:44px;
+font-size:48px;
 
-color:#003b73;
+line-height:1.2;
 
 margin-bottom:20px;
 
@@ -105,27 +131,35 @@ margin-bottom:20px;
 
 font-size:18px;
 
+opacity:.95;
+
 margin-bottom:35px;
 
-color:#555;
+}
+
+.button-group{
+
+display:flex;
+
+gap:20px;
+
+flex-wrap:wrap;
 
 }
 
 .btn{
 
-display:inline-block;
+background:white;
 
-padding:15px 35px;
+color:#0B5ED7;
 
-background:#0b6edc;
-
-color:white;
-
-text-decoration:none;
+padding:16px 34px;
 
 border-radius:50px;
 
 font-weight:600;
+
+text-decoration:none;
 
 transition:.3s;
 
@@ -133,47 +167,81 @@ transition:.3s;
 
 .btn:hover{
 
-background:#004c99;
-
-transform:translateY(-3px);
+transform:translateY(-4px);
 
 }
 
-.hero img{
+.btn-outline{
 
-width:100%;
+border:2px solid white;
 
-max-width:520px;
+color:white;
 
-margin:auto;
-
-display:block;
+background:transparent;
 
 }
+
+.btn-outline:hover{
+
+background:white;
+
+color:#0B5ED7;
+
+}
+
+.hero-card{
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(10px);
+
+padding:35px;
+
+border-radius:20px;
+
+border:1px solid rgba(255,255,255,.2);
+
+}
+
+.hero-card h3{
+
+margin-bottom:20px;
+
+}
+
+.hero-card p{
+
+margin:10px 0;
+
+}
+
+/* ================= SECTION ================= */
 
 .section{
 
-padding:70px 8%;
+padding:80px 8%;
 
 }
 
-.section-title{
-
-text-align:center;
+.title{
 
 font-size:34px;
 
+text-align:center;
+
 margin-bottom:50px;
 
-color:#003b73;
+color:#0B5ED7;
 
 }
 
-.cards{
+/* ================= GRID ================= */
+
+.grid{
 
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 
 gap:25px;
 
@@ -183,11 +251,11 @@ gap:25px;
 
 background:white;
 
-border-radius:15px;
-
 padding:30px;
 
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+border-radius:18px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
 
 transition:.3s;
 
@@ -195,7 +263,7 @@ transition:.3s;
 
 .card:hover{
 
-transform:translateY(-6px);
+transform:translateY(-8px);
 
 }
 
@@ -203,33 +271,11 @@ transform:translateY(-6px);
 
 margin-bottom:18px;
 
-color:#0058b0;
+color:#0B5ED7;
 
 }
 
-.info{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
-gap:25px;
-
-}
-
-.info-box{
-
-background:white;
-
-padding:25px;
-
-border-left:6px solid #0b6edc;
-
-border-radius:10px;
-
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-
-}
+/* ================= TIMELINE ================= */
 
 .timeline{
 
@@ -237,21 +283,25 @@ display:grid;
 
 gap:20px;
 
+max-width:900px;
+
+margin:auto;
+
 }
 
-.step{
+.item{
 
 display:flex;
 
-align-items:flex-start;
-
 gap:20px;
+
+align-items:flex-start;
 
 background:white;
 
-padding:20px;
+padding:22px;
 
-border-radius:12px;
+border-radius:15px;
 
 box-shadow:0 5px 20px rgba(0,0,0,.08);
 
@@ -259,59 +309,95 @@ box-shadow:0 5px 20px rgba(0,0,0,.08);
 
 .number{
 
-width:50px;
+width:55px;
 
-height:50px;
-
-background:#0b6edc;
-
-color:white;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
+height:55px;
 
 border-radius:50%;
 
-font-weight:bold;
+background:#0B5ED7;
 
-font-size:20px;
+display:flex;
 
-}
+justify-content:center;
 
-footer{
-
-background:#003b73;
+align-items:center;
 
 color:white;
 
-padding:40px;
+font-size:22px;
+
+font-weight:bold;
+
+flex-shrink:0;
+
+}
+
+/* ================= CTA ================= */
+
+.cta{
+
+background:#0B5ED7;
+
+color:white;
 
 text-align:center;
 
-margin-top:60px;
+padding:70px 20px;
 
 }
 
-.footer-small{
+.cta h2{
 
-font-size:14px;
+font-size:36px;
 
-opacity:.8;
-
-margin-top:10px;
+margin-bottom:20px;
 
 }
+
+/* ================= FOOTER ================= */
+
+footer{
+
+background:#082d66;
+
+color:white;
+
+padding:35px;
+
+text-align:center;
+
+}
+
+/* ================= MOBILE ================= */
 
 @media(max-width:900px){
+
+header{
+
+flex-direction:column;
+
+gap:15px;
+
+padding:18px;
+
+}
+
+nav{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
 
 .hero{
 
 grid-template-columns:1fr;
 
 text-align:center;
+
+padding-top:180px;
 
 }
 
@@ -321,9 +407,21 @@ font-size:34px;
 
 }
 
-nav{
+.button-group{
 
-display:none;
+justify-content:center;
+
+}
+
+.hero-card{
+
+margin-top:10px;
+
+}
+
+.title{
+
+font-size:28px;
 
 }
 
@@ -347,11 +445,11 @@ display:none;
 
 <a href="#">Beranda</a>
 
-<a href="#informasi">Informasi</a>
-
 <a href="#jadwal">Jadwal</a>
 
 <a href="#syarat">Persyaratan</a>
+
+<a href="#kontak">Kontak</a>
 
 </nav>
 
@@ -361,89 +459,101 @@ display:none;
 
 <div>
 
-<h1>Pendaftaran Tenaga BLUD Rumah Sakit Umum Daerah dr. Soedarso Tahun 2026</h1>
+<h1>
+
+Pendaftaran Tenaga BLUD
+
+Rumah Sakit Umum Daerah dr. Soedarso
+
+Tahun 2026
+
+</h1>
 
 <p>
 
-Selamat datang pada Portal Resmi Pendaftaran Tenaga BLUD RSUD dr. Soedarso Tahun 2026.
+Portal resmi penerimaan Tenaga BLUD RSUD dr. Soedarso Tahun 2026.
 
-Silakan membaca seluruh informasi dengan cermat sebelum melakukan pendaftaran.
+Silakan membaca seluruh informasi sebelum melakukan pendaftaran.
 
 </p>
 
+<div class="button-group">
+
 <a href="#" class="btn">
 
-📝 LINK PENDAFTARAN
+DAFTAR SEKARANG
+
+</a>
+
+<a href="#" class="btn btn-outline">
+
+PENGUMUMAN
 
 </a>
 
 </div>
 
+</div>
+
 <div>
 
-<img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800" alt="Hospital">
+<div class="hero-card">
+
+<h3>📢 Informasi Penting</h3>
+
+<p><strong>Pendaftaran :</strong> Akan diumumkan</p>
+
+<p><strong>Seleksi Administrasi :</strong> Akan diumumkan</p>
+
+<p><strong>Tes Kompetensi :</strong> Akan diumumkan</p>
+
+<p><strong>Pengumuman :</strong> Akan diumumkan</p>
+
+</div>
 
 </div>
 
 </section>
 
-<section class="section" id="informasi">
+<section class="section">
 
-<h2 class="section-title">
+<h2 class="title">
 
-Informasi Pendaftaran
+Informasi Seleksi
 
 </h2>
 
-<div class="info">
+<div class="grid">
 
-<div class="info-box">
+<div class="card">
 
-<h3>📅 Tanggal Pendaftaran</h3>
+<h3>📅 Jadwal</h3>
 
-<p>
-
-........................................
-
-</p>
+Tanggal pendaftaran akan diumumkan kemudian.
 
 </div>
 
-<div class="info-box">
+<div class="card">
 
-<h3>📢 Pengumuman Seleksi</h3>
+<h3>📄 Persyaratan</h3>
 
-<p>
-
-........................................
-
-</p>
+Persyaratan lengkap akan diumumkan kemudian.
 
 </div>
 
-<div class="info-box">
+<div class="card">
 
-<h3>📍 Lokasi</h3>
+<h3>🖥 Pendaftaran</h3>
 
-<p>
-
-RSUD dr. Soedarso
-
-Pontianak
-
-</p>
+Seluruh proses dilakukan secara online.
 
 </div>
 
-<div class="info-box">
+<div class="card">
 
-<h3>📄 Pengumuman Resmi</h3>
+<h3>📢 Pengumuman</h3>
 
-<p>
-
-........................................
-
-</p>
+Seluruh hasil seleksi diumumkan melalui website ini.
 
 </div>
 
@@ -453,7 +563,7 @@ Pontianak
 
 <section class="section" id="jadwal">
 
-<h2 class="section-title">
+<h2 class="title">
 
 Tahapan Seleksi
 
@@ -461,7 +571,7 @@ Tahapan Seleksi
 
 <div class="timeline">
 
-<div class="step">
+<div class="item">
 
 <div class="number">1</div>
 
@@ -469,13 +579,13 @@ Tahapan Seleksi
 
 <h3>Pendaftaran Online</h3>
 
-<p>..............................................</p>
+Tanggal akan diumumkan.
 
 </div>
 
 </div>
 
-<div class="step">
+<div class="item">
 
 <div class="number">2</div>
 
@@ -483,13 +593,13 @@ Tahapan Seleksi
 
 <h3>Seleksi Administrasi</h3>
 
-<p>..............................................</p>
+Jadwal akan diumumkan.
 
 </div>
 
 </div>
 
-<div class="step">
+<div class="item">
 
 <div class="number">3</div>
 
@@ -497,13 +607,13 @@ Tahapan Seleksi
 
 <h3>Tes Kompetensi</h3>
 
-<p>..............................................</p>
+Jadwal akan diumumkan.
 
 </div>
 
 </div>
 
-<div class="step">
+<div class="item">
 
 <div class="number">4</div>
 
@@ -511,7 +621,7 @@ Tahapan Seleksi
 
 <h3>Pengumuman Kelulusan</h3>
 
-<p>..............................................</p>
+Jadwal akan diumumkan.
 
 </div>
 
@@ -523,61 +633,35 @@ Tahapan Seleksi
 
 <section class="section" id="syarat">
 
-<h2 class="section-title">
+<h2 class="title">
 
 Persyaratan Umum
 
 </h2>
 
-<div class="cards">
+<div class="grid">
 
 <div class="card">
 
-<h3>Persyaratan</h3>
-
-<ul>
-
-<li>................................</li>
-
-<li>................................</li>
-
-<li>................................</li>
-
-<li>................................</li>
-
-</ul>
+✔ Warga Negara Indonesia
 
 </div>
 
 <div class="card">
 
-<h3>Dokumen</h3>
-
-<ul>
-
-<li>................................</li>
-
-<li>................................</li>
-
-<li>................................</li>
-
-<li>................................</li>
-
-</ul>
+✔ Memenuhi persyaratan administrasi
 
 </div>
 
 <div class="card">
 
-<h3>Informasi</h3>
+✔ Sehat jasmani dan rohani
 
-<p>
+</div>
 
-Seluruh proses pendaftaran dilakukan secara online.
+<div class="card">
 
-Pastikan seluruh dokumen telah lengkap sebelum mengirimkan formulir.
-
-</p>
+✔ Persyaratan lainnya sesuai formasi
 
 </div>
 
@@ -585,51 +669,41 @@ Pastikan seluruh dokumen telah lengkap sebelum mengirimkan formulir.
 
 </section>
 
-<section class="section">
+<section class="cta">
 
-<div style="background:linear-gradient(135deg,#004c99,#0b6edc);padding:50px;border-radius:20px;color:white;text-align:center;">
-
-<h2 style="font-size:36px;margin-bottom:20px;">
+<h2>
 
 Siap Bergabung Bersama RSUD dr. Soedarso?
 
 </h2>
 
-<p style="margin-bottom:30px;font-size:18px;">
+<p>
 
-Klik tombol di bawah ini untuk melakukan pendaftaran.
+Klik tombol di bawah untuk melakukan pendaftaran.
 
 </p>
 
-<a href="#" class="btn" style="background:white;color:#0058b0;">
+<br>
+
+<a href="#" class="btn">
 
 DAFTAR SEKARANG
 
 </a>
 
-</div>
-
 </section>
 
-<footer>
+<footer id="kontak">
 
-<h3>
+<h3>Rumah Sakit Umum Daerah dr. Soedarso</h3>
 
-RSUD dr. Soedarso
+<p>Portal Resmi Pendaftaran Tenaga BLUD Tahun 2026</p>
 
-</h3>
+<p style="margin-top:10px">
 
-<div class="footer-small">
+© 2026 RSUD dr. Soedarso
 
-Portal Resmi Pendaftaran Tenaga BLUD Tahun 2026
-
-</div>
-
-<div class="footer-small">
-
-© 2026 Rumah Sakit Umum Daerah dr. Soedarso
-
-</div>
+</p>
 
 </footer>
 
