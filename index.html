@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Pendaftaran Tenaga BLUD RSUD dr. Soedarso 2026</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -16,167 +17,161 @@
         }
 
         body {
+            background: linear-gradient(135deg, #071E49, #0B5ED7, #082F70);
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 30px 20px;
-            background:
-                radial-gradient(circle at top left, rgba(255,255,255,0.12), transparent 35%),
-                radial-gradient(circle at bottom right, rgba(255,255,255,0.08), transparent 35%),
-                linear-gradient(135deg, #061B45 0%, #0B3D91 50%, #08265C 100%);
+            padding: 25px 15px;
             color: white;
         }
 
         .container {
-            width: 100%;
-            max-width: 650px;
-            padding: 45px 40px 35px;
-            border-radius: 28px;
-
             background: rgba(255, 255, 255, 0.97);
+            color: #1d2939;
+            width: 100%;
+            max-width: 760px;
+            padding: 40px 32px;
+            border-radius: 24px;
 
             box-shadow:
-                0 30px 70px rgba(0, 0, 0, 0.30),
-                0 8px 25px rgba(0, 0, 0, 0.12);
+                0 25px 60px rgba(0, 0, 0, 0.30);
 
-            color: #172033;
-            text-align: center;
             position: relative;
             overflow: hidden;
         }
 
-        /* Garis dekorasi atas */
+        /* Dekorasi atas */
         .container::before {
             content: "";
             position: absolute;
             top: 0;
             left: 0;
-            right: 0;
-            height: 6px;
-            background: linear-gradient(90deg, #0B5ED7, #4DA3FF, #0B5ED7);
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(
+                90deg,
+                #0B5ED7,
+                #65A8FF,
+                #0B5ED7
+            );
         }
 
-        .logo-wrapper {
-            width: 82px;
-            height: 82px;
-            margin: 0 auto 18px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 50%;
-            background: linear-gradient(145deg, #EAF3FF, #D7E8FF);
-
-            box-shadow:
-                0 10px 25px rgba(11, 94, 215, 0.18),
-                inset 0 1px 3px rgba(255,255,255,0.8);
-        }
+        /* HEADER */
 
         .logo {
+            text-align: center;
             font-size: 42px;
-        }
-
-        .welcome {
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #0B5ED7;
             margin-bottom: 8px;
         }
 
+        .portal {
+            text-align: center;
+            color: #0B5ED7;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
         h1 {
+            text-align: center;
             font-size: 25px;
             color: #102A56;
             font-weight: 700;
             line-height: 1.35;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         p.subtitle {
-            font-size: 14px;
+            text-align: center;
+            font-size: 13px;
             line-height: 1.7;
             color: #667085;
-            max-width: 500px;
-            margin: 0 auto 28px;
+            margin-bottom: 28px;
         }
 
-        /* Kotak pengumuman */
+
+        /* PENGUMUMAN */
+
         .announcement {
-            text-align: left;
-            padding: 20px;
-            margin-bottom: 22px;
+            background: linear-gradient(
+                135deg,
+                #F4F8FF,
+                #EAF2FF
+            );
 
-            border: 1px solid #DCE8F8;
+            border: 1px solid #D5E4F8;
             border-radius: 17px;
-
-            background: linear-gradient(135deg, #F8FBFF, #EEF5FF);
+            padding: 20px;
+            margin-bottom: 25px;
         }
 
-        .announcement-title {
+        .announcement-header {
             display: flex;
             align-items: center;
-            gap: 10px;
-
-            font-size: 14px;
-            font-weight: 700;
-            color: #173B70;
-            margin-bottom: 7px;
+            gap: 12px;
+            margin-bottom: 8px;
         }
 
         .announcement-icon {
-            width: 36px;
-            height: 36px;
+            width: 42px;
+            height: 42px;
+            background: #0B5ED7;
+            color: white;
+            border-radius: 12px;
 
             display: flex;
             align-items: center;
             justify-content: center;
 
-            border-radius: 10px;
-            background: white;
-
-            box-shadow: 0 4px 12px rgba(11, 94, 215, 0.10);
-
-            font-size: 18px;
+            font-size: 20px;
+            box-shadow: 0 5px 15px rgba(11,94,215,0.25);
         }
 
-        .announcement p {
+        .announcement-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #173B70;
+        }
+
+        .announcement-text {
             font-size: 12px;
-            line-height: 1.6;
             color: #667085;
-            margin-left: 46px;
+            line-height: 1.6;
+            margin-bottom: 13px;
         }
 
-        /* Tombol lihat PDF */
-        .btn-pdf {
-            display: block;
-            width: 100%;
-            margin-top: 15px;
-            padding: 11px 15px;
+        /* 
+           GANTI URL DI SINI DENGAN LINK PDF ANDA
+        */
 
+        .pdf-button {
+            display: inline-block;
+            background: white;
+            color: #0B5ED7;
+            border: 1px solid #C9DCF5;
+
+            padding: 10px 15px;
             border-radius: 10px;
 
-            background: white;
-            border: 1px solid #D5E3F5;
-
-            color: #0B5ED7;
             text-decoration: none;
-
             font-size: 12px;
             font-weight: 600;
 
-            transition: all 0.25s ease;
+            transition: 0.25s ease;
         }
 
-        .btn-pdf:hover {
-            background: #F0F6FF;
-            border-color: #0B5ED7;
-            transform: translateY(-1px);
+        .pdf-button:hover {
+            background: #0B5ED7;
+            color: white;
+            transform: translateY(-2px);
         }
 
-        /* Tombol utama */
+
+        /* TOMBOL DAFTAR */
+
         .btn-primary {
             display: flex;
             align-items: center;
@@ -188,198 +183,713 @@
 
             border-radius: 13px;
 
-            background: linear-gradient(135deg, #0B5ED7, #084298);
-            color: white;
+            background: linear-gradient(
+                135deg,
+                #0B5ED7,
+                #084298
+            );
 
+            color: white;
             text-decoration: none;
 
             font-size: 15px;
             font-weight: 700;
 
             box-shadow:
-                0 8px 22px rgba(11, 94, 215, 0.32);
+                0 8px 20px rgba(11, 94, 215, 0.35);
 
             transition: all 0.3s ease;
+
+            margin-bottom: 35px;
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
             box-shadow:
-                0 12px 28px rgba(11, 94, 215, 0.40);
+                0 12px 28px rgba(11, 94, 215, 0.45);
         }
 
-        .btn-primary:active {
-            transform: translateY(-1px);
+
+        /* TIMELINE */
+
+        .timeline-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            color: #102A56;
+            font-size: 19px;
+            font-weight: 700;
+
+            margin-bottom: 20px;
         }
 
-        .arrow {
+        .timeline-title-icon {
+            width: 38px;
+            height: 38px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #EAF2FF;
+            color: #0B5ED7;
+
+            border-radius: 11px;
             font-size: 18px;
-            transition: transform 0.3s ease;
         }
 
-        .btn-primary:hover .arrow {
-            transform: translateX(4px);
+        .timeline {
+            position: relative;
+            padding-left: 10px;
         }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 19px;
+            top: 8px;
+            bottom: 8px;
+            width: 2px;
+            background: #D8E6FA;
+        }
+
+        .timeline-item {
+            position: relative;
+            display: flex;
+            gap: 15px;
+            margin-bottom: 13px;
+        }
+
+        .timeline-number {
+            flex: 0 0 38px;
+            height: 38px;
+
+            border-radius: 50%;
+
+            background: linear-gradient(
+                145deg,
+                #0B5ED7,
+                #084298
+            );
+
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            z-index: 2;
+
+            box-shadow:
+                0 4px 10px rgba(11,94,215,0.25);
+        }
+
+        .timeline-content {
+            flex: 1;
+
+            background: #F8FAFD;
+            border: 1px solid #E3EAF3;
+
+            border-radius: 12px;
+
+            padding: 11px 14px;
+
+            transition: 0.2s ease;
+        }
+
+        .timeline-content:hover {
+            border-color: #BBD3F2;
+            transform: translateX(2px);
+        }
+
+        .timeline-name {
+            font-size: 12px;
+            font-weight: 700;
+            color: #243B5A;
+            margin-bottom: 4px;
+        }
+
+        .timeline-date {
+            font-size: 11px;
+            font-weight: 600;
+            color: #0B5ED7;
+            line-height: 1.5;
+        }
+
+        .timeline-info {
+            font-size: 10px;
+            color: #7A8699;
+            margin-top: 2px;
+            line-height: 1.4;
+        }
+
+
+        /* CATATAN */
+
+        .note {
+            margin-top: 20px;
+            padding: 14px 16px;
+
+            border-radius: 12px;
+
+            background: #FFF9E8;
+            border: 1px solid #F2E2A8;
+
+            color: #765B00;
+
+            font-size: 10px;
+            line-height: 1.6;
+        }
+
+
+        /* FOOTER */
 
         footer {
-            margin-top: 25px;
-            padding-top: 18px;
+            margin-top: 28px;
+            padding-top: 20px;
 
             border-top: 1px solid #EAECF0;
+
+            text-align: center;
 
             font-size: 11px;
             color: #98A2B3;
         }
 
-        .status {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-
-            margin-top: 7px;
-
+        .footer-status {
+            margin-top: 6px;
             font-size: 10px;
             color: #667085;
         }
 
-        .status-dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: #12B76A;
-        }
 
-        @media (max-width: 480px) {
+        /* MOBILE */
+
+        @media (max-width: 600px) {
 
             body {
-                padding: 18px 14px;
+                padding: 15px 10px;
             }
 
             .container {
-                padding: 38px 20px 28px;
-                border-radius: 23px;
-            }
-
-            .logo-wrapper {
-                width: 72px;
-                height: 72px;
-            }
-
-            .logo {
-                font-size: 36px;
+                padding: 32px 18px;
+                border-radius: 20px;
             }
 
             h1 {
                 font-size: 21px;
             }
 
-            p.subtitle {
-                font-size: 13px;
+            .logo {
+                font-size: 38px;
             }
 
-            .announcement {
-                padding: 16px;
+            .timeline {
+                padding-left: 0;
             }
 
-            .announcement p {
-                margin-left: 0;
-                margin-top: 8px;
+            .timeline-item {
+                gap: 10px;
             }
 
-            .btn-primary {
-                font-size: 14px;
-                padding: 15px;
+            .timeline-number {
+                flex: 0 0 32px;
+                height: 32px;
+                font-size: 10px;
+            }
+
+            .timeline::before {
+                left: 16px;
+            }
+
+            .timeline-content {
+                padding: 10px 11px;
+            }
+
+            .timeline-name {
+                font-size: 11px;
+            }
+
+            .timeline-date {
+                font-size: 10px;
+            }
+
+            .timeline-info {
+                font-size: 9px;
             }
         }
+
     </style>
 </head>
 
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <!-- Logo -->
-        <div class="logo-wrapper">
-            <div class="logo">🏥</div>
-        </div>
+    <!-- HEADER -->
 
-        <div class="welcome">
-            Portal Resmi
-        </div>
+    <div class="logo">🏥</div>
 
-        <h1>
-            Pendaftaran Tenaga BLUD<br>
-            RSUD dr. Soedarso 2026
-        </h1>
+    <div class="portal">
+        Portal Resmi
+    </div>
 
-        <p class="subtitle">
-            Selamat datang di portal pendaftaran tenaga BLUD
-            RSUD dr. Soedarso. Silakan membaca pengumuman
-            dan menyiapkan dokumen persyaratan sebelum melakukan pendaftaran.
-        </p>
+    <h1>
+        Pendaftaran Tenaga BLUD<br>
+        RSUD dr. Soedarso 2026
+    </h1>
+
+    <p class="subtitle">
+        Silakan membaca pengumuman resmi dan memperhatikan
+        jadwal pendaftaran sebelum melakukan pendaftaran.
+    </p>
 
 
-        <!-- ==========================================
-             TEMPAT PDF PENGUMUMAN REKRUTMEN
-             GANTI URL DI BAWAH DENGAN URL PDF GOOGLE DRIVE
-             ========================================== -->
+    <!-- =====================================
+         PENGUMUMAN REKRUTMEN
+         GANTI LINK PDF DI BAGIAN href
+         ===================================== -->
 
-        <div class="announcement">
+    <div class="announcement">
 
-            <div class="announcement-title">
-                <div class="announcement-icon">
-                    📄
-                </div>
+        <div class="announcement-header">
 
-                <span>
-                    Pengumuman Rekrutmen
-                </span>
+            <div class="announcement-icon">
+                📄
             </div>
 
-            <p>
-                Silakan membaca pengumuman resmi rekrutmen
-                sebelum melakukan pendaftaran.
-            </p>
-
-            <!--
-                GANTI href DI BAWAH INI
-                DENGAN URL PDF GOOGLE DRIVE ANDA
-            -->
-
-            <a
-                href="TEMPEL_URL_PDF_GOOGLE_DRIVE_DISINI"
-                class="btn-pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                📖 Lihat Pengumuman Rekrutmen
-            </a>
+            <div class="announcement-title">
+                Pengumuman Rekrutmen
+            </div>
 
         </div>
 
+        <div class="announcement-text">
+            Silakan membaca pengumuman resmi rekrutmen
+            Tenaga BLUD RSUD dr. Soedarso 2026
+            sebelum melakukan pendaftaran.
+        </div>
 
-        <!-- Tombol Pendaftaran -->
+        <!-- TEMPEL URL PDF GOOGLE DRIVE DI SINI -->
+
         <a
-            href="https://script.google.com/macros/s/AKfycby-dYEniWdUvMRpp4PhFmE6hioFwZdLTRneTk5A6SOO9Gm-l2wSfooxuKg2o1zCiwceag/exec"
-            class="btn-primary"
+            href="TEMPEL_URL_PDF_GOOGLE_DRIVE_DISINI"
+            class="pdf-button"
             target="_blank"
             rel="noopener noreferrer"
         >
-            📝 DAFTAR SEKARANG
-            <span class="arrow">→</span>
+            📖 Lihat Pengumuman
         </a>
 
+    </div>
 
-        <footer>
-            © 2026 RSUD dr. Soedarso
 
-            <div class="status">
-                <span class="status-dot"></span>
-                Portal Pendaftaran
-            </div>
-        </footer>
+    <!-- =====================================
+         TOMBOL PENDAFTARAN
+         ===================================== -->
+
+    <a
+        href="https://script.google.com/macros/s/AKfycby-dYEniWdUvMRpp4PhFmE6hioFwZdLTRneTk5A6SOO9Gm-l2wSfooxuKg2o1zCiwceag/exec"
+        class="btn-primary"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        📝 DAFTAR SEKARANG
+        <span>→</span>
+    </a>
+
+
+    <!-- =====================================
+         TIMELINE PENDAFTARAN
+         ===================================== -->
+
+    <div class="timeline-title">
+
+        <div class="timeline-title-icon">
+            📅
+        </div>
+
+        <span>Timeline Pendaftaran</span>
 
     </div>
+
+
+    <div class="timeline">
+
+
+        <!-- 1 -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-number">1</div>
+
+            <div class="timeline-content">
+
+                <div class="timeline-name">
+                    Pengumuman Pendaftaran
+                </div>
+
+                <div class="timeline-date">
+                    4 September 2026
+                </div>
+
+                <div class="timeline-info">
+                    Informasi resmi melalui RSUD dr. Soedarso.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 2 -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-number">2</div>
+
+            <div class="timeline-content">
+
+                <div class="timeline-name">
+                    Pendaftaran & Pengumpulan Berkas
+                </div>
+
+                <div class="timeline-date">
+                    4 – 11 September 2026
+                </div>
+
+                <div class="timeline-info">
+                    Pukul 24.00 WIB pendaftaran ditutup.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 3 -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-number">3</div>
+
+            <div class="timeline-content">
+
+                <div class="timeline-name">
+                    Verifikasi & Validasi Berkas
+                </div>
+
+                <div class="timeline-date">
+                    5 – 12 September 2026
+                </div>
+
+                <div class="timeline-info">
+                    Dilaksanakan oleh Tim Sekretariat Pansel.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 4 -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-number">4</div>
+
+            <div class="timeline-content">
+
+                <div class="timeline-name">
+                    Pengumuman Kelulusan Seleksi Administrasi
+                </div>
+
+                <div class="timeline-date">
+                    14 September 2026
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 5 -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-number">5</div>
+
+            <div class="timeline-content">
+
+                <div class="timeline-name">
+                    Masa Sanggah
+                </div>
+
+                <div class="timeline-date">
+                    14 – 15 September 2026
+                </div>
+
+                <div class="timeline-info">
+                    Pukul 16.00 WIB masa sanggah ditutup.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 6 -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-number">6</div>
+
+            <div class="timeline-content">
+
+                <div class="timeline-name">
+                    Jawab Sanggah
+                </div>
+
+                <div class="timeline-date">
+                    14 – 15 September 2026
+                </div>
+
+                <div class="timeline-info">
+                    Tim Sekretariat Pansel.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 7 -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-number">7</div>
+
+            <div class="timeline-content">
+
+                <div class="timeline-name">
+                    Pengumuman Kelulusan Seleksi Administrasi
+                    & Jadwal CAT
+                </div>
+
+                <div class="timeline-date">
+                    17 September 2026
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 8 -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-number">8</div>
+
+            <div class="timeline-content">
+
+                <div class="timeline-name">
+                    Pelaksanaan CAT
+                    <i>(Computer Assisted Test)</i>
+                </div>
+
+                <div class="timeline-date">
+                    21 – 25 September 2026
+                </div>
+
+                <div class="timeline-info">
+                    Sesuai jadwal pelaksanaan CAT yang telah diumumkan.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 9 -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-number">9</div>
+
+            <div class="timeline-content">
+
+                <div class="timeline-name">
+                    Pengumuman Hasil CAT
+                </div>
+
+                <div class="timeline-date">
+                    28 September 2026
+                </div>
+
+                <div class="timeline-info">
+                    Termasuk penilaian administrasi dan kompetensi.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 10 -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-number">10</div>
+
+            <div class="timeline-content">
+
+                <div class="timeline-name">
+                    Pemeriksaan Kesehatan Jasmani & Rohani
+                </div>
+
+                <div class="timeline-date">
+                    29 – 30 September 2026
+                </div>
+
+                <div class="timeline-info">
+                    Tim Sekretariat Pansel dan MCU.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 11 -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-number">11</div>
+
+            <div class="timeline-content">
+
+                <div class="timeline-name">
+                    Pengumuman Kelulusan
+                </div>
+
+                <div class="timeline-date">
+                    2 Oktober 2026
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 12 -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-number">12</div>
+
+            <div class="timeline-content">
+
+                <div class="timeline-name">
+                    Pemberkasan
+                </div>
+
+                <div class="timeline-date">
+                    5 Oktober 2026
+                </div>
+
+                <div class="timeline-info">
+                    Tim Sekretariat Pansel.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 13 -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-number">13</div>
+
+            <div class="timeline-content">
+
+                <div class="timeline-name">
+                    Orientasi Umum
+                </div>
+
+                <div class="timeline-date">
+                    6 Oktober 2026
+                </div>
+
+                <div class="timeline-info">
+                    Tim Sekretariat Pansel.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 14 -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-number">14</div>
+
+            <div class="timeline-content">
+
+                <div class="timeline-name">
+                    Orientasi Khusus
+                </div>
+
+                <div class="timeline-date">
+                    7 Oktober – 7 November 2026
+                </div>
+
+                <div class="timeline-info">
+                    Bagian/Bidang.
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- CATATAN -->
+
+    <div class="note">
+
+        <strong>ℹ️ Perhatian:</strong><br>
+
+        Peserta diharapkan membaca pengumuman resmi
+        dan mengikuti seluruh tahapan serta jadwal
+        pendaftaran yang telah ditetapkan.
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 RSUD dr. Soedarso
+
+        <div class="footer-status">
+            Portal Pendaftaran Tenaga BLUD
+        </div>
+
+    </footer>
+
+</div>
 
 </body>
 </html>
