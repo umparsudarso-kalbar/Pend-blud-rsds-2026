@@ -17,16 +17,17 @@
         }
 
         body {
-            background:
-                radial-gradient(circle at top left, rgba(255,255,255,.12), transparent 30%),
-                linear-gradient(135deg, #061B45, #0B5ED7, #082F70);
-
             min-height: 100vh;
+            padding: 20px 12px;
+
             display: flex;
             justify-content: center;
             align-items: center;
 
-            padding: 20px 12px;
+            background:
+                radial-gradient(circle at top left, rgba(255,255,255,.12), transparent 30%),
+                linear-gradient(135deg, #061B45, #0B5ED7, #082F70);
+
             color: #1d2939;
         }
 
@@ -34,12 +35,14 @@
             width: 100%;
             max-width: 720px;
 
-            background: rgba(255,255,255,.97);
+            background: rgba(255,255,255,.98);
 
-            border-radius: 25px;
-            padding: 30px;
+            border-radius: 24px;
 
-            box-shadow: 0 25px 60px rgba(0,0,0,.30);
+            padding: 32px;
+
+            box-shadow:
+                0 25px 60px rgba(0,0,0,.30);
 
             position: relative;
             overflow: hidden;
@@ -48,118 +51,41 @@
         .container::before {
             content: "";
             position: absolute;
+
             top: 0;
             left: 0;
+
             width: 100%;
             height: 5px;
 
             background: linear-gradient(
                 90deg,
                 #0B5ED7,
-                #7DB7FF,
+                #67A9FF,
                 #0B5ED7
             );
         }
 
 
-        /* =================================================
-           NOTICE PEMBUKAAN / SISA WAKTU
-        ================================================= */
-
-        .opening-notice {
-            background: linear-gradient(
-                135deg,
-                #071E49,
-                #0B5ED7
-            );
-
-            color: white;
-
-            border-radius: 17px;
-            padding: 18px 20px;
-
-            margin-bottom: 25px;
-
-            text-align: center;
-
-            box-shadow: 0 8px 22px rgba(11,94,215,.25);
-        }
-
-        .notice-label {
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-
-            opacity: .9;
-            margin-bottom: 4px;
-        }
-
-        .notice-date {
-            font-size: 15px;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .time-box {
-            background: rgba(255,255,255,.14);
-
-            border: 1px solid rgba(255,255,255,.20);
-
-            border-radius: 10px;
-
-            min-width: 58px;
-            padding: 8px 6px;
-        }
-
-        .time-number {
-            font-size: 20px;
-            font-weight: 700;
-            line-height: 1;
-        }
-
-        .time-label {
-            font-size: 8px;
-            opacity: .8;
-            margin-top: 4px;
-        }
-
-        .opened {
-            font-size: 17px;
-            font-weight: 700;
-        }
-
-        .closed {
-            font-size: 16px;
-            font-weight: 700;
-        }
-
-
-        /* =================================================
-           HEADER
-        ================================================= */
+        /* ==========================================
+           JUDUL
+        ========================================== */
 
         .logo {
             text-align: center;
-            font-size: 42px;
+            font-size: 40px;
             margin-bottom: 5px;
         }
 
         .portal {
             text-align: center;
 
-            color: #0B5ED7;
-
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 700;
 
             letter-spacing: 2px;
+
+            color: #0B5ED7;
 
             margin-bottom: 6px;
         }
@@ -172,7 +98,7 @@
             font-size: 24px;
             line-height: 1.35;
 
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         .subtitle {
@@ -180,188 +106,285 @@
 
             color: #667085;
 
-            font-size: 13px;
+            font-size: 12px;
             line-height: 1.6;
 
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
 
-        /* =================================================
-           PENGUMUMAN
-        ================================================= */
+        /* ==========================================
+           NOTICE WAKTU
+        ========================================== */
 
-        .announcement {
+        .opening-notice {
+
             background: linear-gradient(
                 135deg,
-                #F3F7FF,
-                #E7F0FF
+                #071E49,
+                #0B5ED7
             );
 
-            border: 1px solid #D5E4F8;
-
-            border-radius: 17px;
-
-            padding: 20px;
-
-            margin-bottom: 14px;
-        }
-
-        .announcement h2 {
-            color: #173B70;
-
-            font-size: 15px;
-
-            margin-bottom: 7px;
-        }
-
-        .announcement p {
-            color: #667085;
-
-            font-size: 12px;
-            line-height: 1.6;
-
-            margin-bottom: 13px;
-        }
-
-        .pdf-button {
-            display: inline-block;
-
-            background: white;
-
-            color: #0B5ED7;
-
-            border: 1px solid #C9DCF5;
-
-            padding: 10px 15px;
-
-            border-radius: 10px;
-
-            text-decoration: none;
-
-            font-size: 12px;
-            font-weight: 600;
-
-            transition: .25s;
-        }
-
-        .pdf-button:hover {
-            background: #0B5ED7;
             color: white;
 
-            transform: translateY(-2px);
+            border-radius: 16px;
+
+            padding: 17px 15px;
+
+            margin-bottom: 18px;
+
+            text-align: center;
+
+            box-shadow:
+                0 8px 20px rgba(11,94,215,.25);
+        }
+
+        .notice-label {
+
+            font-size: 10px;
+            font-weight: 700;
+
+            letter-spacing: 1.2px;
+
+            margin-bottom: 3px;
+        }
+
+        .notice-date {
+
+            font-size: 14px;
+            font-weight: 700;
+
+            margin-bottom: 11px;
+        }
+
+        .countdown {
+
+            display: flex;
+            justify-content: center;
+            gap: 7px;
+        }
+
+        .time-box {
+
+            min-width: 58px;
+
+            padding: 7px 5px;
+
+            background: rgba(255,255,255,.13);
+
+            border: 1px solid rgba(255,255,255,.20);
+
+            border-radius: 9px;
+        }
+
+        .time-number {
+
+            font-size: 19px;
+            font-weight: 700;
+
+            line-height: 1;
+        }
+
+        .time-label {
+
+            font-size: 7px;
+
+            opacity: .8;
+
+            margin-top: 4px;
+        }
+
+        .opened {
+
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .closed {
+
+            font-size: 15px;
+            font-weight: 700;
         }
 
 
-        /* =================================================
-           NOTICE KHUSUS JABATAN
-        ================================================= */
+        /* ==========================================
+           NOTICE JABATAN
+        ========================================== */
 
         .position-notice {
+
             background: #FFF9E8;
 
-            border: 1px solid #F0DEA1;
+            border: 1px solid #EFDFA9;
 
-            border-radius: 15px;
+            border-radius: 14px;
 
-            padding: 16px 18px;
+            padding: 14px 16px;
 
-            margin-bottom: 14px;
+            margin-bottom: 16px;
         }
 
         .position-title {
-            color: #725600;
 
-            font-size: 12px;
-            font-weight: 700;
-
-            margin-bottom: 8px;
-        }
-
-        .position-text {
-            color: #6F5A17;
+            color: #735800;
 
             font-size: 11px;
-            line-height: 1.6;
+
+            font-weight: 700;
 
             margin-bottom: 6px;
         }
 
+        .position-text {
+
+            color: #79651E;
+
+            font-size: 10px;
+
+            line-height: 1.5;
+
+            margin-bottom: 4px;
+        }
+
         .position-list {
+
             padding-left: 18px;
 
-            color: #604D0B;
+            color: #66530E;
 
             font-size: 11px;
-            line-height: 1.8;
+
+            line-height: 1.7;
         }
 
 
-        /* =================================================
-           TOMBOL TAMBAHAN
-        ================================================= */
+        /* ==========================================
+           PENGUMUMAN PDF
+        ========================================== */
 
-        .button-group {
+        .announcement {
+
             display: flex;
-            flex-direction: column;
-            gap: 9px;
+            align-items: center;
+            justify-content: space-between;
 
-            margin-bottom: 14px;
+            gap: 12px;
+
+            background: #F5F8FD;
+
+            border: 1px solid #E0E8F3;
+
+            border-radius: 14px;
+
+            padding: 13px 15px;
+
+            margin-bottom: 12px;
         }
 
-        .btn-secondary {
-            display: block;
+        .announcement-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-            width: 100%;
+        .announcement-icon {
 
-            text-align: center;
+            width: 36px;
+            height: 36px;
 
-            padding: 13px;
+            flex-shrink: 0;
 
-            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 9px;
+
+            background: #E6F0FF;
+
+            font-size: 17px;
+        }
+
+        .announcement-title {
+
+            color: #263B5A;
+
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .announcement-text {
+
+            color: #7A8699;
+
+            font-size: 9px;
+
+            margin-top: 2px;
+        }
+
+        .pdf-button {
+
+            flex-shrink: 0;
 
             background: white;
 
             color: #0B5ED7;
 
-            border: 1px solid #C9DCF5;
+            border: 1px solid #C8D9EF;
+
+            padding: 8px 11px;
+
+            border-radius: 8px;
 
             text-decoration: none;
 
-            font-size: 12px;
+            font-size: 9px;
             font-weight: 600;
 
-            transition: .25s;
+            transition: .2s;
         }
 
-        .btn-secondary:hover {
-            background: #EEF5FF;
+        .pdf-button:hover {
 
-            border-color: #0B5ED7;
+            background: #0B5ED7;
+            color: white;
 
-            transform: translateY(-2px);
+            transform: translateY(-1px);
         }
 
 
-        /* =================================================
-           TOMBOL DAFTAR
-        ================================================= */
+        /* ==========================================
+           TOMBOL UTAMA
+        ========================================== */
 
-        .btn-primary {
-            display: block;
+        .main-buttons {
+
+            display: flex;
+            flex-direction: column;
+
+            gap: 9px;
+
+            margin-bottom: 10px;
+        }
+
+        .btn-register {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 10px;
 
             width: 100%;
 
-            text-align: center;
-
-            padding: 16px;
+            padding: 17px;
 
             border-radius: 13px;
 
             background: linear-gradient(
                 135deg,
                 #0B5ED7,
-                #084298
+                #063A91
             );
 
             color: white;
@@ -372,81 +395,168 @@
             font-weight: 700;
 
             box-shadow:
-                0 8px 20px rgba(11,94,215,.35);
+                0 9px 22px rgba(11,94,215,.38);
 
-            transition: .3s;
-
-            margin-bottom: 30px;
+            transition: .25s;
         }
 
-        .btn-primary:hover {
+        .btn-register:hover {
+
             transform: translateY(-3px);
 
             box-shadow:
-                0 12px 28px rgba(11,94,215,.45);
+                0 13px 28px rgba(11,94,215,.48);
+        }
+
+        .btn-tracking {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 9px;
+
+            width: 100%;
+
+            padding: 13px;
+
+            border-radius: 12px;
+
+            background: #EAF2FF;
+
+            color: #0B5ED7;
+
+            border: 1px solid #BBD3F2;
+
+            text-decoration: none;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            transition: .25s;
+        }
+
+        .btn-tracking:hover {
+
+            background: #DCEBFF;
+
+            transform: translateY(-2px);
         }
 
 
-        /* =================================================
+        /* ==========================================
+           TEMPLATE SURAT
+        ========================================== */
+
+        .template-area {
+
+            text-align: center;
+
+            margin-top: 5px;
+            margin-bottom: 28px;
+        }
+
+        .template-button {
+
+            display: inline-block;
+
+            color: #667085;
+
+            font-size: 9px;
+
+            text-decoration: none;
+
+            padding: 5px 9px;
+
+            border: 1px solid #D9E1EB;
+
+            border-radius: 7px;
+
+            background: #FAFBFC;
+
+            transition: .2s;
+        }
+
+        .template-button:hover {
+
+            color: #0B5ED7;
+
+            border-color: #BBD3F2;
+
+            background: #F3F7FF;
+        }
+
+
+        /* ==========================================
            TIMELINE
-        ================================================= */
+        ========================================== */
 
         .section-title {
+
             color: #102A56;
 
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 700;
 
-            margin-bottom: 12px;
+            margin-bottom: 11px;
         }
 
         .timeline-box {
+
             background: #F7F9FC;
 
-            border: 1px solid #E1E8F0;
+            border: 1px solid #E0E7F0;
 
             border-radius: 15px;
 
-            padding: 15px;
+            padding: 14px;
 
-            /* SCROLL */
-            max-height: 430px;
+            max-height: 410px;
+
             overflow-y: auto;
         }
 
         .timeline-box::-webkit-scrollbar {
-            width: 6px;
+
+            width: 5px;
         }
 
         .timeline-box::-webkit-scrollbar-track {
-            background: #EEF2F7;
+
+            background: #EDF1F6;
+
             border-radius: 10px;
         }
 
         .timeline-box::-webkit-scrollbar-thumb {
-            background: #AFC7E5;
+
+            background: #B5C9E2;
+
             border-radius: 10px;
         }
 
         .timeline {
+
             border-left: 3px solid #D5E4F8;
 
-            padding-left: 18px;
+            padding-left: 17px;
+
             margin-left: 8px;
         }
 
         .timeline-item {
+
             position: relative;
 
             background: white;
 
             border: 1px solid #E3EAF3;
 
-            border-radius: 12px;
+            border-radius: 11px;
 
-            padding: 12px 14px;
+            padding: 11px 13px;
 
-            margin-bottom: 9px;
+            margin-bottom: 8px;
         }
 
         .timeline-item:last-child {
@@ -454,15 +564,17 @@
         }
 
         .timeline-item::before {
+
             content: "";
 
             position: absolute;
 
-            left: -27px;
-            top: 17px;
+            left: -26px;
 
-            width: 10px;
-            height: 10px;
+            top: 15px;
+
+            width: 9px;
+            height: 9px;
 
             background: #0B5ED7;
 
@@ -475,79 +587,86 @@
         }
 
         .timeline-date {
+
             color: #0B5ED7;
-
-            font-size: 10px;
-            font-weight: 700;
-
-            margin-bottom: 3px;
-        }
-
-        .timeline-name {
-            color: #243B5A;
-
-            font-size: 11px;
-            font-weight: 600;
-
-            line-height: 1.4;
-        }
-
-        .timeline-info {
-            color: #7A8699;
 
             font-size: 9px;
 
-            line-height: 1.5;
+            font-weight: 700;
 
-            margin-top: 3px;
+            margin-bottom: 2px;
+        }
+
+        .timeline-name {
+
+            color: #243B5A;
+
+            font-size: 10px;
+
+            font-weight: 600;
+
+            line-height: 1.45;
+        }
+
+        .timeline-info {
+
+            color: #7A8699;
+
+            font-size: 8px;
+
+            line-height: 1.45;
+
+            margin-top: 2px;
         }
 
 
-        /* =================================================
+        /* ==========================================
            CATATAN
-        ================================================= */
+        ========================================== */
 
         .note {
-            margin-top: 15px;
 
-            padding: 12px 14px;
+            margin-top: 13px;
 
-            background: #F3F7FF;
+            padding: 11px 13px;
 
-            border: 1px solid #D7E5F7;
+            background: #F5F8FD;
 
-            border-radius: 11px;
+            border: 1px solid #DCE5F0;
 
-            color: #52637A;
+            border-radius: 10px;
 
-            font-size: 10px;
+            color: #596A80;
+
+            font-size: 9px;
 
             line-height: 1.6;
         }
 
 
-        /* =================================================
+        /* ==========================================
            FOOTER
-        ================================================= */
+        ========================================== */
 
         footer {
+
             text-align: center;
 
             border-top: 1px solid #EAECF0;
 
-            margin-top: 23px;
+            margin-top: 22px;
 
-            padding-top: 17px;
+            padding-top: 16px;
 
             color: #98A2B3;
 
-            font-size: 10px;
+            font-size: 9px;
         }
 
 
-        /* =================================================
+        /* ==========================================
            MOBILE
-        ================================================= */
+        ========================================== */
 
         @media (max-width: 480px) {
 
@@ -556,7 +675,7 @@
             }
 
             .container {
-                padding: 25px 17px;
+                padding: 25px 15px;
                 border-radius: 20px;
             }
 
@@ -565,23 +684,36 @@
             }
 
             .subtitle {
-                font-size: 12px;
+                font-size: 11px;
             }
 
             .time-box {
-                min-width: 52px;
+                min-width: 51px;
             }
 
             .time-number {
-                font-size: 18px;
+                font-size: 17px;
+            }
+
+            .announcement {
+                align-items: flex-start;
+            }
+
+            .announcement-info {
+                align-items: flex-start;
+            }
+
+            .pdf-button {
+                font-size: 8px;
+                padding: 7px 8px;
             }
 
             .timeline-box {
-                max-height: 400px;
+                max-height: 390px;
             }
 
-            .timeline-name {
-                font-size: 10px;
+            .btn-register {
+                font-size: 14px;
             }
         }
 
@@ -594,14 +726,37 @@
 <div class="container">
 
 
-    <!-- =================================================
-         NOTICE PEMBUKAAN
-    ================================================= -->
+    <!-- ==========================================
+         JUDUL
+    ========================================== -->
+
+    <div class="logo">
+        🏥
+    </div>
+
+    <div class="portal">
+        PORTAL RESMI
+    </div>
+
+    <h1>
+        Pendaftaran Tenaga BLUD<br>
+        RSUD dr. Soedarso 2026
+    </h1>
+
+    <p class="subtitle">
+        Portal resmi pendaftaran Tenaga BLUD RSUD dr. Soedarso.
+        Silakan membaca pengumuman sebelum melakukan pendaftaran.
+    </p>
+
+
+    <!-- ==========================================
+         NOTICE WAKTU
+    ========================================== -->
 
     <div class="opening-notice">
 
         <div id="noticeLabel" class="notice-label">
-            📢 Pendaftaran Dibuka
+            📢 PENDAFTARAN AKAN DIBUKA
         </div>
 
         <div id="noticeDate" class="notice-date">
@@ -635,43 +790,60 @@
     </div>
 
 
-    <!-- =================================================
-         HEADER
-    ================================================= -->
+    <!-- ==========================================
+         NOTICE KHUSUS JABATAN
+    ========================================== -->
 
-    <div class="logo">
-        🏥
+    <div class="position-notice">
+
+        <div class="position-title">
+            ⭐ PERHATIAN KHUSUS PELAMAR JABATAN
+        </div>
+
+        <div class="position-text">
+            Notice ini khusus diperhatikan oleh pelamar pada:
+        </div>
+
+        <ul class="position-list">
+
+            <li>
+                Pengolah Data Akuntansi
+            </li>
+
+            <li>
+                Pengolah Data
+            </li>
+
+        </ul>
+
     </div>
 
-    <div class="portal">
-        PORTAL RESMI
-    </div>
 
-    <h1>
-        Pendaftaran Tenaga BLUD<br>
-        RSUD dr. Soedarso 2026
-    </h1>
-
-    <p class="subtitle">
-        Silakan membaca pengumuman resmi dan memperhatikan
-        jadwal pendaftaran sebelum melakukan pendaftaran.
-    </p>
-
-
-    <!-- =================================================
-         PENGUMUMAN
-    ================================================= -->
+    <!-- ==========================================
+         PENGUMUMAN PDF
+    ========================================== -->
 
     <div class="announcement">
 
-        <h2>
-            📄 Pengumuman Rekrutmen
-        </h2>
+        <div class="announcement-info">
 
-        <p>
-            Silakan membaca pengumuman resmi rekrutmen
-            sebelum melakukan pendaftaran.
-        </p>
+            <div class="announcement-icon">
+                📄
+            </div>
+
+            <div>
+
+                <div class="announcement-title">
+                    Pengumuman Rekrutmen
+                </div>
+
+                <div class="announcement-text">
+                    Baca pengumuman resmi sebelum mendaftar.
+                </div>
+
+            </div>
+
+        </div>
 
         <a
             href="https://drive.google.com/file/d/1csFa_HB_jXV1gFTr5INE-rf6WxSe2h_3/view?usp=sharing"
@@ -679,87 +851,72 @@
             target="_blank"
             rel="noopener noreferrer"
         >
-            📖 Lihat Pengumuman
+            📖 Lihat
         </a>
 
     </div>
 
 
-    <!-- =================================================
-         NOTICE KHUSUS JABATAN
-    ================================================= -->
+    <!-- ==========================================
+         TOMBOL UTAMA
+    ========================================== -->
 
-    <div class="position-notice">
+    <div class="main-buttons">
 
-        <div class="position-title">
-            ⭐ KHUSUS PELAMAR JABATAN
-        </div>
+        <!-- TOMBOL PENDAFTARAN -->
 
-        <div class="position-text">
-            Notice ini diperuntukkan bagi pelamar pada jabatan:
-        </div>
+        <a
+            href="https://script.google.com/macros/s/AKfycby-dYEniWdUvMRpp4PhFmE6hioFwZdLTRneTk5A6SOO9Gm-l2wSfooxuKg2o1zCiwceag/exec"
+            class="btn-register"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            📝 DAFTAR SEKARANG
+            <span>→</span>
+        </a>
 
-        <ul class="position-list">
-            <li>Pengolah Data Akuntansi</li>
-            <li>Pengolah Data</li>
-        </ul>
+
+        <!-- TOMBOL TELUSUR -->
+
+        <!--
+            NANTI GANTI URL DI BAWAH INI
+            DENGAN URL GOOGLE APPS SCRIPT ANDA
+        -->
+
+        <a
+            href="TEMPEL_URL_GAS_TELUSUR_PENDAFTAR_DISINI"
+            class="btn-tracking"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            👥 Telusur Jumlah Pendaftar Sementara
+            <span>→</span>
+        </a>
 
     </div>
 
 
-    <!-- =================================================
-         TOMBOL TAMBAHAN
-    ================================================= -->
+    <!-- ==========================================
+         TEMPLATE SURAT
+    ========================================== -->
 
-    <div class="button-group">
-
-        <!-- Template Surat Keterangan Bekerja -->
-        <!-- LINK GOOGLE DOCS DIUBAH MENJADI LINK DOWNLOAD DOCX -->
+    <div class="template-area">
 
         <a
             href="https://docs.google.com/document/d/1p5yhGDzpYcAC9xEyYnbuc7x_g66RLvgtYE9vc2hifBA/export?format=docx"
-            class="btn-secondary"
+            class="template-button"
             target="_blank"
             rel="noopener noreferrer"
         >
             📄 Template Surat Keterangan Bekerja
         </a>
 
-
-        <!--
-            NANTI GANTI URL INI DENGAN URL GOOGLE APPS SCRIPT
-            UNTUK TELUSUR JUMLAH PENDAFTAR
-        -->
-
-        <a
-            href="TEMPEL_URL_GAS_TELUSUR_PENDAFTAR_DISINI"
-            class="btn-secondary"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            👥 Telusur Jumlah Pendaftar Sementara
-        </a>
-
     </div>
 
 
-    <!-- =================================================
-         TOMBOL DAFTAR
-    ================================================= -->
-
-    <a
-        href="https://script.google.com/macros/s/AKfycby-dYEniWdUvMRpp4PhFmE6hioFwZdLTRneTk5A6SOO9Gm-l2wSfooxuKg2o1zCiwceag/exec"
-        class="btn-primary"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        📝 DAFTAR SEKARANG →
-    </a>
-
-
-    <!-- =================================================
+    <!-- ==========================================
          TIMELINE LENGKAP
-    ================================================= -->
+    ========================================== -->
 
     <div class="section-title">
         📅 Timeline Pendaftaran
@@ -771,185 +928,231 @@
 
 
             <div class="timeline-item">
+
                 <div class="timeline-date">
                     4 September 2026
                 </div>
+
                 <div class="timeline-name">
                     Pengumuman Pendaftaran
                 </div>
+
                 <div class="timeline-info">
                     Informasi resmi melalui media resmi RSUD dr. Soedarso.
                 </div>
+
             </div>
 
 
             <div class="timeline-item">
+
                 <div class="timeline-date">
                     4 – 11 September 2026
                 </div>
+
                 <div class="timeline-name">
-                    Pelamar memasukkan berkas Lamaran
-                    (Seleksi Administrasi) Pendaftaran melalui link
+                    Pelamar memasukkan berkas lamaran
+                    (Seleksi Administrasi)
                 </div>
+
                 <div class="timeline-info">
-                    Pukul 24.00 WIB pendaftaran ditutup.
+                    Pendaftaran melalui link. Pukul 24.00 WIB pendaftaran ditutup.
                 </div>
+
             </div>
 
 
             <div class="timeline-item">
+
                 <div class="timeline-date">
                     5 – 12 September 2026
                 </div>
+
                 <div class="timeline-name">
                     Verifikasi dan Validasi Berkas
-                    Seleksi Administrasi
                 </div>
+
                 <div class="timeline-info">
-                    Tim Sekretariat Pansel.
+                    Seleksi administrasi oleh Tim Sekretariat Pansel.
                 </div>
+
             </div>
 
 
             <div class="timeline-item">
+
                 <div class="timeline-date">
                     14 September 2026
                 </div>
+
                 <div class="timeline-name">
                     Pengumuman Kelulusan Seleksi Administrasi
                 </div>
+
             </div>
 
 
             <div class="timeline-item">
+
                 <div class="timeline-date">
                     14 – 15 September 2026
                 </div>
+
                 <div class="timeline-name">
                     Masa Sanggah
                 </div>
+
                 <div class="timeline-info">
                     Pukul 16.00 WIB masa sanggah ditutup.
                 </div>
+
             </div>
 
 
             <div class="timeline-item">
+
                 <div class="timeline-date">
                     14 – 15 September 2026
                 </div>
+
                 <div class="timeline-name">
                     Jawab Sanggah
                 </div>
+
                 <div class="timeline-info">
                     Tim Sekretariat Pansel.
                 </div>
+
             </div>
 
 
             <div class="timeline-item">
+
                 <div class="timeline-date">
                     17 September 2026
                 </div>
+
                 <div class="timeline-name">
                     Pengumuman Kelulusan Seleksi Administrasi
                     dan Jadwal Pelaksanaan CAT
                 </div>
-                <div class="timeline-info">
-                    Computer Assisted Test (CAT).
-                </div>
+
             </div>
 
 
             <div class="timeline-item">
+
                 <div class="timeline-date">
                     21 – 25 September 2026
                 </div>
+
                 <div class="timeline-name">
                     Pelaksanaan CAT
                     (Computer Assisted Test)
                 </div>
+
                 <div class="timeline-info">
                     Sesuai jadwal pelaksanaan CAT yang telah diumumkan.
                 </div>
+
             </div>
 
 
             <div class="timeline-item">
+
                 <div class="timeline-date">
                     28 September 2026
                 </div>
+
                 <div class="timeline-name">
                     Pengumuman Hasil CAT
                 </div>
+
                 <div class="timeline-info">
                     Termasuk penilaian administrasi dan kompetensi.
                 </div>
+
             </div>
 
 
             <div class="timeline-item">
+
                 <div class="timeline-date">
                     29 – 30 September 2026
                 </div>
+
                 <div class="timeline-name">
                     Pemeriksaan Kesehatan Jasmani dan Rohani
                 </div>
+
                 <div class="timeline-info">
                     Tim Sekretariat Pansel dan MCU.
                 </div>
+
             </div>
 
 
             <div class="timeline-item">
+
                 <div class="timeline-date">
                     2 Oktober 2026
                 </div>
+
                 <div class="timeline-name">
                     Pengumuman Kelulusan
                 </div>
-                <div class="timeline-info">
-                    Tim Sekretariat Pansel.
-                </div>
+
             </div>
 
 
             <div class="timeline-item">
+
                 <div class="timeline-date">
                     5 Oktober 2026
                 </div>
+
                 <div class="timeline-name">
                     Pemberkasan
                 </div>
+
                 <div class="timeline-info">
                     Tim Sekretariat Pansel.
                 </div>
+
             </div>
 
 
             <div class="timeline-item">
+
                 <div class="timeline-date">
                     6 Oktober 2026
                 </div>
+
                 <div class="timeline-name">
                     Orientasi Umum
                 </div>
+
                 <div class="timeline-info">
                     Tim Sekretariat Pansel.
                 </div>
+
             </div>
 
 
             <div class="timeline-item">
+
                 <div class="timeline-date">
                     7 Oktober – 7 November 2026
                 </div>
+
                 <div class="timeline-name">
                     Orientasi Khusus
                 </div>
+
                 <div class="timeline-info">
                     Bagian/Bidang.
                 </div>
+
             </div>
 
 
@@ -958,14 +1161,13 @@
     </div>
 
 
-    <!-- =================================================
+    <!-- ==========================================
          CATATAN
-    ================================================= -->
+    ========================================== -->
 
     <div class="note">
 
-        <strong>ℹ️ Perhatian:</strong><br>
-
+        <strong>ℹ️ Perhatian:</strong>
         Peserta wajib membaca pengumuman resmi,
         menyiapkan dokumen yang dipersyaratkan,
         dan mengikuti seluruh tahapan sesuai jadwal.
@@ -979,6 +1181,7 @@
 
         © 2026 RSUD dr. Soedarso
         <br>
+
         Portal Pendaftaran Tenaga BLUD
 
     </footer>
@@ -988,18 +1191,21 @@
 
 
 <!-- =================================================
-     JAVASCRIPT COUNTDOWN
+     COUNTDOWN OTOMATIS
 ================================================= -->
 
 <script>
 
     /*
-        PEMBUKAAN:
+        PEMBUKAAN
         4 September 2026 pukul 00.00 WIB
 
-        PENUTUPAN:
+        PENUTUPAN
         12 September 2026 pukul 00.00 WIB
-        (berarti sampai 11 September pukul 24.00 WIB)
+
+        Artinya pendaftaran berlangsung:
+        4 September – 11 September 2026
+        dan ditutup pada 12 September pukul 00.00 WIB.
     */
 
     const openingTime =
@@ -1013,54 +1219,67 @@
 
         const now = new Date().getTime();
 
-        const countdown = document.getElementById("countdown");
-        const label = document.getElementById("noticeLabel");
-        const date = document.getElementById("noticeDate");
+        const label =
+            document.getElementById("noticeLabel");
+
+        const date =
+            document.getElementById("noticeDate");
+
+        const countdown =
+            document.getElementById("countdown");
 
 
-        /* =================================
-           SEBELUM PEMBUKAAN
-        ================================= */
+        /* ===============================
+           BELUM DIBUKA
+        =============================== */
 
         if (now < openingTime) {
 
-            label.innerHTML = "📢 PENDAFTARAN AKAN DIBUKA";
+            label.innerHTML =
+                "📢 PENDAFTARAN AKAN DIBUKA";
 
-            date.innerHTML = "4 – 12 September 2026";
+            date.innerHTML =
+                "4 – 12 September 2026";
 
-            let distance = openingTime - now;
+            const distance =
+                openingTime - now;
 
-            showTime(distance);
+            tampilkanWaktu(distance);
 
             return;
         }
 
 
-        /* =================================
-           SAAT PENDAFTARAN BERLANGSUNG
-        ================================= */
+        /* ===============================
+           SEDANG DIBUKA
+        =============================== */
 
         if (now >= openingTime && now < closingTime) {
 
-            label.innerHTML = "🟢 PENDAFTARAN SEDANG DIBUKA";
+            label.innerHTML =
+                "🟢 PENDAFTARAN SEDANG DIBUKA";
 
-            date.innerHTML = "Batas akhir: 12 September 2026 • 00.00 WIB";
+            date.innerHTML =
+                "Batas akhir: 12 September 2026 • 00.00 WIB";
 
-            let distance = closingTime - now;
+            const distance =
+                closingTime - now;
 
-            showTime(distance);
+            tampilkanWaktu(distance);
 
             return;
         }
 
 
-        /* =================================
-           PENDAFTARAN DITUTUP
-        ================================= */
+        /* ===============================
+           SUDAH DITUTUP
+        =============================== */
 
-        label.innerHTML = "🔴 PENDAFTARAN TELAH DITUTUP";
+        label.innerHTML =
+            "🔴 PENDAFTARAN TELAH DITUTUP";
 
-        date.innerHTML = "Masa pendaftaran 4 – 11 September 2026";
+        date.innerHTML =
+            "Masa pendaftaran telah berakhir";
 
         countdown.innerHTML =
             '<div class="closed">Terima kasih atas partisipasi Anda.</div>';
@@ -1068,7 +1287,7 @@
     }
 
 
-    function showTime(distance) {
+    function tampilkanWaktu(distance) {
 
         const days =
             Math.floor(
@@ -1109,7 +1328,12 @@
     }
 
 
+    /* Jalankan pertama kali */
+
     updateCountdown();
+
+
+    /* Update setiap 1 detik */
 
     setInterval(updateCountdown, 1000);
 
