@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pendaftaran Tenaga BLUD RSUD dr. Soedarso 2026</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
@@ -14,137 +16,369 @@
         }
 
         body {
-            background: linear-gradient(135deg, #0B5ED7, #0A3D91);
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px;
+            padding: 30px 20px;
+            background:
+                radial-gradient(circle at top left, rgba(255,255,255,0.12), transparent 35%),
+                radial-gradient(circle at bottom right, rgba(255,255,255,0.08), transparent 35%),
+                linear-gradient(135deg, #061B45 0%, #0B3D91 50%, #08265C 100%);
             color: white;
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.95);
-            color: #1d2939;
             width: 100%;
-            max-width: 600px;
-            padding: 40px 30px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            max-width: 650px;
+            padding: 45px 40px 35px;
+            border-radius: 28px;
+
+            background: rgba(255, 255, 255, 0.97);
+
+            box-shadow:
+                0 30px 70px rgba(0, 0, 0, 0.30),
+                0 8px 25px rgba(0, 0, 0, 0.12);
+
+            color: #172033;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Garis dekorasi atas */
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #0B5ED7, #4DA3FF, #0B5ED7);
+        }
+
+        .logo-wrapper {
+            width: 82px;
+            height: 82px;
+            margin: 0 auto 18px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+            background: linear-gradient(145deg, #EAF3FF, #D7E8FF);
+
+            box-shadow:
+                0 10px 25px rgba(11, 94, 215, 0.18),
+                inset 0 1px 3px rgba(255,255,255,0.8);
         }
 
         .logo {
-            font-size: 40px;
-            margin-bottom: 10px;
+            font-size: 42px;
+        }
+
+        .welcome {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #0B5ED7;
+            margin-bottom: 8px;
         }
 
         h1 {
-            font-size: 22px;
-            color: #0B5ED7;
+            font-size: 25px;
+            color: #102A56;
             font-weight: 700;
-            line-height: 1.3;
-            margin-bottom: 8px;
+            line-height: 1.35;
+            margin-bottom: 12px;
         }
 
         p.subtitle {
             font-size: 14px;
+            line-height: 1.7;
             color: #667085;
-            margin-bottom: 30px;
+            max-width: 500px;
+            margin: 0 auto 28px;
         }
 
-        .button-group {
+        /* Kotak pengumuman */
+        .announcement {
+            text-align: left;
+            padding: 20px;
+            margin-bottom: 22px;
+
+            border: 1px solid #DCE8F8;
+            border-radius: 17px;
+
+            background: linear-gradient(135deg, #F8FBFF, #EEF5FF);
+        }
+
+        .announcement-title {
             display: flex;
-            flex-direction: column;
-            gap: 14px;
+            align-items: center;
+            gap: 10px;
+
+            font-size: 14px;
+            font-weight: 700;
+            color: #173B70;
+            margin-bottom: 7px;
         }
 
-        .btn {
+        .announcement-icon {
+            width: 36px;
+            height: 36px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 10px;
+            background: white;
+
+            box-shadow: 0 4px 12px rgba(11, 94, 215, 0.10);
+
+            font-size: 18px;
+        }
+
+        .announcement p {
+            font-size: 12px;
+            line-height: 1.6;
+            color: #667085;
+            margin-left: 46px;
+        }
+
+        /* Tombol lihat PDF */
+        .btn-pdf {
             display: block;
             width: 100%;
-            padding: 14px 20px;
-            border-radius: 12px;
-            font-size: 14px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            text-align: center;
-        }
+            margin-top: 15px;
+            padding: 11px 15px;
 
-        /* Tombol Unduh/Buat File */
-        .btn-outline {
-            background: #F0F5FF;
+            border-radius: 10px;
+
+            background: white;
+            border: 1px solid #D5E3F5;
+
             color: #0B5ED7;
-            border: 2px solid #D0E1FD;
+            text-decoration: none;
+
+            font-size: 12px;
+            font-weight: 600;
+
+            transition: all 0.25s ease;
         }
 
-        .btn-outline:hover {
-            background: #E1ECFE;
+        .btn-pdf:hover {
+            background: #F0F6FF;
             border-color: #0B5ED7;
-            transform: translateY(-2px);
+            transform: translateY(-1px);
         }
 
-        /* Tombol utama Daftar */
+        /* Tombol utama */
         .btn-primary {
-            background: #0B5ED7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            width: 100%;
+            padding: 16px 20px;
+
+            border-radius: 13px;
+
+            background: linear-gradient(135deg, #0B5ED7, #084298);
             color: white;
-            box-shadow: 0 4px 14px rgba(11, 94, 215, 0.4);
-            margin-top: 6px;
+
+            text-decoration: none;
+
+            font-size: 15px;
+            font-weight: 700;
+
+            box-shadow:
+                0 8px 22px rgba(11, 94, 215, 0.32);
+
+            transition: all 0.3s ease;
         }
 
         .btn-primary:hover {
-            background: #084298;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(11, 94, 215, 0.5);
+            transform: translateY(-3px);
+            box-shadow:
+                0 12px 28px rgba(11, 94, 215, 0.40);
+        }
+
+        .btn-primary:active {
+            transform: translateY(-1px);
+        }
+
+        .arrow {
+            font-size: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-primary:hover .arrow {
+            transform: translateX(4px);
         }
 
         footer {
             margin-top: 25px;
-            font-size: 12px;
-            color: #8896AB;
+            padding-top: 18px;
+
+            border-top: 1px solid #EAECF0;
+
+            font-size: 11px;
+            color: #98A2B3;
+        }
+
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+
+            margin-top: 7px;
+
+            font-size: 10px;
+            color: #667085;
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #12B76A;
         }
 
         @media (max-width: 480px) {
+
+            body {
+                padding: 18px 14px;
+            }
+
             .container {
-                padding: 30px 20px;
+                padding: 38px 20px 28px;
+                border-radius: 23px;
             }
+
+            .logo-wrapper {
+                width: 72px;
+                height: 72px;
+            }
+
+            .logo {
+                font-size: 36px;
+            }
+
             h1 {
-                font-size: 20px;
+                font-size: 21px;
             }
-            .btn {
+
+            p.subtitle {
                 font-size: 13px;
-                padding: 12px 16px;
+            }
+
+            .announcement {
+                padding: 16px;
+            }
+
+            .announcement p {
+                margin-left: 0;
+                margin-top: 8px;
+            }
+
+            .btn-primary {
+                font-size: 14px;
+                padding: 15px;
             }
         }
     </style>
 </head>
+
 <body>
 
     <div class="container">
-        <div class="logo">🏥</div>
-        <h1>Pendaftaran Tenaga BLUD<br>RSUD dr. Soedarso 2026</h1>
-        <p class="subtitle">Silakan siapkan dokumen persyaratan sebelum mendaftar.</p>
 
-        <div class="button-group">
-            <!-- Ganti href="#" dengan link Anda nanti -->
-            <a href="#" class="btn btn-outline" target="_blank">
-                📄 1. Buat File Surat Tidak Sedang Menjalani Kontrak
-            </a>
-            
-            <!-- Ganti href="#" dengan link Anda nanti -->
-            <a href="#" class="btn btn-outline" target="_blank">
-                📄 2. Buat File Kesediaan Menjadi Pegawai BLUD
-            </a>
-
-            <!-- Tombol Utama Pendaftaran -->
-            <a href="https://script.google.com/macros/s/AKfycby-dYEniWdUvMRpp4PhFmE6hioFwZdLTRneTk5A6SOO9Gm-l2wSfooxuKg2o1zCiwceag/exec" class="btn btn-primary" target="_blank">
-                📝 3. DAFTAR SEKARANG
-            </a>
+        <!-- Logo -->
+        <div class="logo-wrapper">
+            <div class="logo">🏥</div>
         </div>
+
+        <div class="welcome">
+            Portal Resmi
+        </div>
+
+        <h1>
+            Pendaftaran Tenaga BLUD<br>
+            RSUD dr. Soedarso 2026
+        </h1>
+
+        <p class="subtitle">
+            Selamat datang di portal pendaftaran tenaga BLUD
+            RSUD dr. Soedarso. Silakan membaca pengumuman
+            dan menyiapkan dokumen persyaratan sebelum melakukan pendaftaran.
+        </p>
+
+
+        <!-- ==========================================
+             TEMPAT PDF PENGUMUMAN REKRUTMEN
+             GANTI URL DI BAWAH DENGAN URL PDF GOOGLE DRIVE
+             ========================================== -->
+
+        <div class="announcement">
+
+            <div class="announcement-title">
+                <div class="announcement-icon">
+                    📄
+                </div>
+
+                <span>
+                    Pengumuman Rekrutmen
+                </span>
+            </div>
+
+            <p>
+                Silakan membaca pengumuman resmi rekrutmen
+                sebelum melakukan pendaftaran.
+            </p>
+
+            <!--
+                GANTI href DI BAWAH INI
+                DENGAN URL PDF GOOGLE DRIVE ANDA
+            -->
+
+            <a
+                href="TEMPEL_URL_PDF_GOOGLE_DRIVE_DISINI"
+                class="btn-pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                📖 Lihat Pengumuman Rekrutmen
+            </a>
+
+        </div>
+
+
+        <!-- Tombol Pendaftaran -->
+        <a
+            href="https://script.google.com/macros/s/AKfycby-dYEniWdUvMRpp4PhFmE6hioFwZdLTRneTk5A6SOO9Gm-l2wSfooxuKg2o1zCiwceag/exec"
+            class="btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            📝 DAFTAR SEKARANG
+            <span class="arrow">→</span>
+        </a>
+
 
         <footer>
             © 2026 RSUD dr. Soedarso
+
+            <div class="status">
+                <span class="status-dot"></span>
+                Portal Pendaftaran
+            </div>
         </footer>
+
     </div>
 
 </body>
