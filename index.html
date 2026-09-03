@@ -1,530 +1,581 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Pendaftaran Tenaga BLUD RSUD dr. Soedarso 2026</title>
+<title>Pendaftaran Tenaga BLUD RSUD dr. Soedarso 2026</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+<style>
 
-        body {
-            min-height: 100vh;
-            padding: 20px 12px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+body {
+    min-height: 100vh;
+    padding: 20px 12px;
 
-            background:
-                linear-gradient(135deg, #061B45, #0B5ED7, #082F70);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-            color: #1d2939;
-        }
+    background: linear-gradient(
+        135deg,
+        #061B45,
+        #0B5ED7,
+        #082F70
+    );
 
-        .container {
-            width: 100%;
-            max-width: 650px;
+    color: #1d2939;
+}
 
-            background: rgba(255,255,255,.98);
+.container {
+    width: 100%;
+    max-width: 650px;
 
-            border-radius: 24px;
-            padding: 30px;
+    background: rgba(255,255,255,.98);
 
-            box-shadow: 0 25px 60px rgba(0,0,0,.30);
+    border-radius: 24px;
 
-            position: relative;
-            overflow: hidden;
-        }
+    padding: 30px;
 
-        .container::before {
-            content: "";
-            position: absolute;
+    box-shadow: 0 25px 60px rgba(0,0,0,.30);
 
-            top: 0;
-            left: 0;
+    position: relative;
+    overflow: hidden;
+}
 
-            width: 100%;
-            height: 5px;
+.container::before {
+    content: "";
 
-            background: linear-gradient(
-                90deg,
-                #0B5ED7,
-                #65A8FF,
-                #0B5ED7
-            );
-        }
+    position: absolute;
+    top: 0;
+    left: 0;
 
+    width: 100%;
+    height: 5px;
 
-        /* =========================
-           LOGO
-        ========================= */
+    background: linear-gradient(
+        90deg,
+        #0B5ED7,
+        #65A8FF,
+        #0B5ED7
+    );
+}
 
-        .logo-area {
-            text-align: center;
-            margin-bottom: 10px;
-        }
 
-        .logo {
-            width: 150px;
-            max-width: 55%;
-            height: auto;
-        }
+/* =========================
+   LOGO
+========================= */
 
+.logo-area {
+    text-align: center;
 
-        /* =========================
-           JUDUL
-        ========================= */
+    margin-bottom: 10px;
+}
 
-        .portal {
-            text-align: center;
+.logo-area img {
+    width: 165px;
+    max-width: 55%;
+    height: auto;
 
-            font-size: 10px;
-            font-weight: 700;
+    display: block;
 
-            letter-spacing: 2px;
+    margin: 0 auto;
+}
 
-            color: #0B5ED7;
 
-            margin-bottom: 5px;
-        }
+/* =========================
+   JUDUL
+========================= */
 
-        h1 {
-            text-align: center;
+.portal {
+    text-align: center;
 
-            color: #102A56;
+    font-size: 10px;
+    font-weight: 700;
 
-            font-size: 23px;
-            line-height: 1.35;
+    letter-spacing: 2px;
 
-            margin-bottom: 8px;
-        }
+    color: #0B5ED7;
 
-        .subtitle {
-            text-align: center;
+    margin-bottom: 5px;
+}
 
-            color: #667085;
+h1 {
+    text-align: center;
 
-            font-size: 12px;
-            line-height: 1.6;
+    color: #102A56;
 
-            margin-bottom: 20px;
-        }
+    font-size: 23px;
 
+    line-height: 1.35;
 
-        /* =========================
-           PENGUMUMAN
-        ========================= */
+    margin-bottom: 8px;
+}
 
-        .announcement {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+.subtitle {
+    text-align: center;
 
-            gap: 12px;
+    color: #667085;
 
-            background: #F5F8FD;
+    font-size: 12px;
 
-            border: 1px solid #E0E8F3;
+    line-height: 1.6;
 
-            border-radius: 14px;
+    margin-bottom: 20px;
+}
 
-            padding: 12px 14px;
 
-            margin-bottom: 13px;
-        }
+/* =========================
+   PENGUMUMAN
+========================= */
 
-        .announcement-info {
-            display: flex;
-            align-items: center;
+.announcement {
 
-            gap: 10px;
-        }
+    display: flex;
 
-        .announcement-icon {
-            width: 36px;
-            height: 36px;
+    align-items: center;
+    justify-content: space-between;
 
-            flex-shrink: 0;
+    gap: 12px;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    background: #F5F8FD;
 
-            background: #E7F0FF;
+    border: 1px solid #E0E8F3;
 
-            border-radius: 9px;
+    border-radius: 14px;
 
-            font-size: 17px;
-        }
+    padding: 12px 14px;
 
-        .announcement-title {
-            color: #263B5A;
+    margin-bottom: 13px;
+}
 
-            font-size: 11px;
-            font-weight: 700;
-        }
+.announcement-info {
 
-        .announcement-text {
-            color: #7A8699;
+    display: flex;
+    align-items: center;
 
-            font-size: 9px;
+    gap: 10px;
+}
 
-            margin-top: 2px;
-        }
+.announcement-icon {
 
-        .pdf-button {
-            flex-shrink: 0;
+    width: 36px;
+    height: 36px;
 
-            padding: 8px 12px;
+    flex-shrink: 0;
 
-            border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-            background: white;
+    background: #E7F0FF;
 
-            border: 1px solid #C9D9EE;
+    border-radius: 9px;
 
-            color: #0B5ED7;
+    font-size: 17px;
+}
 
-            text-decoration: none;
+.announcement-title {
 
-            font-size: 9px;
-            font-weight: 600;
-        }
+    color: #263B5A;
 
-        .pdf-button:hover {
-            background: #0B5ED7;
-            color: white;
-        }
+    font-size: 11px;
 
+    font-weight: 700;
+}
 
-        /* =========================
-           TOMBOL UTAMA
-        ========================= */
+.announcement-text {
 
-        .buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+    color: #7A8699;
 
-            margin-top: 8px;
-        }
+    font-size: 9px;
 
-        .btn {
-            width: 100%;
+    margin-top: 2px;
+}
 
-            text-decoration: none;
+.pdf-button {
 
-            text-align: center;
+    flex-shrink: 0;
 
-            border-radius: 13px;
+    padding: 8px 12px;
 
-            transition: all .25s ease;
-        }
+    border-radius: 8px;
 
+    background: white;
 
-        /* DAFTAR */
+    border: 1px solid #C9D9EE;
 
-        .btn-register {
-            padding: 16px;
+    color: #0B5ED7;
 
-            background: linear-gradient(
-                135deg,
-                #0B5ED7,
-                #063A91
-            );
+    text-decoration: none;
 
-            color: white;
+    font-size: 9px;
 
-            font-size: 15px;
-            font-weight: 700;
+    font-weight: 600;
+}
 
-            box-shadow:
-                0 9px 22px rgba(11,94,215,.38);
-        }
+.pdf-button:hover {
 
-        .btn-register:hover {
-            transform: translateY(-3px);
+    background: #0B5ED7;
 
-            box-shadow:
-                0 13px 28px rgba(11,94,215,.48);
-        }
+    color: white;
+}
 
 
-        /* TELUSUR */
+/* =========================
+   TOMBOL
+========================= */
 
-        .btn-search {
-            padding: 14px;
+.buttons {
 
-            background: #EAF2FF;
+    display: flex;
 
-            border: 1px solid #BBD3F2;
+    flex-direction: column;
 
-            color: #0B5ED7;
+    gap: 10px;
 
-            font-size: 13px;
-            font-weight: 700;
-        }
+    margin-top: 8px;
+}
 
-        .btn-search:hover {
-            background: #DCEBFF;
+.btn {
 
-            transform: translateY(-2px);
-        }
+    width: 100%;
 
+    text-decoration: none;
 
-        /* TEMPLATE */
+    text-align: center;
 
-        .btn-template {
-            padding: 11px;
+    border-radius: 13px;
 
-            background: #FAFBFC;
+    transition: all .25s ease;
+}
 
-            border: 1px solid #DCE3EB;
 
-            color: #667085;
+/* =========================
+   DAFTAR SEKARANG
+========================= */
 
-            font-size: 10px;
-            font-weight: 600;
-        }
+.btn-register {
 
-        .btn-template:hover {
-            background: #F2F6FA;
+    padding: 17px;
 
-            color: #0B5ED7;
+    background: linear-gradient(
+        135deg,
+        #0B5ED7,
+        #063A91
+    );
 
-            border-color: #BBD3F2;
-        }
+    color: white;
 
-        .template-jobs {
-            display: block;
+    font-size: 15px;
 
-            margin-top: 3px;
+    font-weight: 700;
 
-            font-size: 8px;
+    box-shadow:
+        0 9px 22px rgba(11,94,215,.38);
+}
 
-            color: #98A2B3;
+.btn-register:hover {
 
-            font-weight: 500;
-        }
+    transform: translateY(-3px);
 
+    box-shadow:
+        0 13px 28px rgba(11,94,215,.48);
+}
 
-        /* =========================
-           TIMELINE
-        ========================= */
 
-        .section-title {
-            margin-top: 25px;
-            margin-bottom: 10px;
+/* =========================
+   TELUSUR PENDAFTAR
+========================= */
 
-            color: #102A56;
+.btn-search {
 
-            font-size: 17px;
-            font-weight: 700;
-        }
+    padding: 14px;
 
-        .timeline-box {
-            max-height: 390px;
+    background: #EAF2FF;
 
-            overflow-y: auto;
+    border: 1px solid #BBD3F2;
 
-            padding: 13px;
+    color: #0B5ED7;
 
-            background: #F7F9FC;
+    font-size: 13px;
 
-            border: 1px solid #E0E7F0;
+    font-weight: 700;
+}
 
-            border-radius: 15px;
-        }
+.btn-search:hover {
 
-        .timeline-box::-webkit-scrollbar {
-            width: 5px;
-        }
+    background: #DCEBFF;
 
-        .timeline-box::-webkit-scrollbar-track {
-            background: #EDF1F6;
-        }
+    transform: translateY(-2px);
+}
 
-        .timeline-box::-webkit-scrollbar-thumb {
-            background: #B5C9E2;
-            border-radius: 10px;
-        }
 
-        .timeline {
-            border-left: 3px solid #D5E4F8;
+/* =========================
+   TEMPLATE
+========================= */
 
-            padding-left: 17px;
-            margin-left: 8px;
-        }
+.btn-template {
 
-        .timeline-item {
-            position: relative;
+    padding: 10px;
 
-            background: white;
+    background: #FAFBFC;
 
-            border: 1px solid #E3EAF3;
+    border: 1px solid #DCE3EB;
 
-            border-radius: 11px;
+    color: #667085;
 
-            padding: 11px 13px;
+    font-size: 9px;
 
-            margin-bottom: 8px;
-        }
+    font-weight: 600;
+}
 
-        .timeline-item:last-child {
-            margin-bottom: 0;
-        }
+.btn-template:hover {
 
-        .timeline-item::before {
-            content: "";
+    background: #F2F6FA;
 
-            position: absolute;
+    color: #0B5ED7;
 
-            left: -26px;
-            top: 15px;
+    border-color: #BBD3F2;
+}
 
-            width: 9px;
-            height: 9px;
+.template-jobs {
 
-            background: #0B5ED7;
+    display: block;
 
-            border: 3px solid white;
+    margin-top: 3px;
 
-            border-radius: 50%;
+    font-size: 8px;
 
-            box-shadow:
-                0 0 0 2px #BBD3F2;
-        }
+    color: #98A2B3;
 
-        .timeline-date {
-            color: #0B5ED7;
+    font-weight: 500;
+}
 
-            font-size: 9px;
 
-            font-weight: 700;
+/* =========================
+   TIMELINE
+========================= */
 
-            margin-bottom: 2px;
-        }
+.section-title {
 
-        .timeline-name {
-            color: #243B5A;
+    margin-top: 25px;
 
-            font-size: 10px;
+    margin-bottom: 10px;
 
-            font-weight: 600;
+    color: #102A56;
 
-            line-height: 1.45;
-        }
+    font-size: 17px;
 
-        .timeline-info {
-            color: #7A8699;
+    font-weight: 700;
+}
 
-            font-size: 8px;
+.timeline-box {
 
-            line-height: 1.45;
+    max-height: 390px;
 
-            margin-top: 2px;
-        }
+    overflow-y: auto;
 
+    padding: 13px;
 
-        /* =========================
-           CATATAN
-        ========================= */
+    background: #F7F9FC;
 
-        .note {
-            margin-top: 12px;
+    border: 1px solid #E0E7F0;
 
-            padding: 10px 12px;
+    border-radius: 15px;
+}
 
-            background: #F5F8FD;
+.timeline-box::-webkit-scrollbar {
 
-            border: 1px solid #DCE5F0;
+    width: 5px;
+}
 
-            border-radius: 10px;
+.timeline-box::-webkit-scrollbar-track {
 
-            color: #596A80;
+    background: #EDF1F6;
+}
 
-            font-size: 9px;
+.timeline-box::-webkit-scrollbar-thumb {
 
-            line-height: 1.6;
-        }
+    background: #B5C9E2;
 
+    border-radius: 10px;
+}
 
-        /* =========================
-           FOOTER
-        ========================= */
+.timeline {
 
-        footer {
-            text-align: center;
+    border-left: 3px solid #D5E4F8;
 
-            margin-top: 20px;
-            padding-top: 15px;
+    padding-left: 17px;
 
-            border-top: 1px solid #EAECF0;
+    margin-left: 8px;
+}
 
-            color: #98A2B3;
+.timeline-item {
 
-            font-size: 9px;
-        }
+    position: relative;
 
+    background: white;
 
-        /* =========================
-           MOBILE
-        ========================= */
+    border: 1px solid #E3EAF3;
 
-        @media (max-width: 480px) {
+    border-radius: 11px;
 
-            .container {
-                padding: 25px 16px;
-            }
+    padding: 11px 13px;
 
-            .logo {
-                width: 125px;
-            }
+    margin-bottom: 8px;
+}
 
-            h1 {
-                font-size: 20px;
-            }
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
 
-            .subtitle {
-                font-size: 11px;
-            }
+.timeline-item::before {
 
-            .announcement {
-                align-items: flex-start;
-            }
+    content: "";
 
-            .announcement-text {
-                font-size: 8px;
-            }
+    position: absolute;
 
-            .pdf-button {
-                font-size: 8px;
-                padding: 7px 9px;
-            }
+    left: -26px;
 
-            .btn-register {
-                font-size: 14px;
-            }
+    top: 15px;
 
-            .btn-search {
-                font-size: 12px;
-            }
+    width: 9px;
+    height: 9px;
 
-            .timeline-box {
-                max-height: 360px;
-            }
-        }
+    background: #0B5ED7;
 
-    </style>
+    border: 3px solid white;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 2px #BBD3F2;
+}
+
+.timeline-date {
+
+    color: #0B5ED7;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    margin-bottom: 2px;
+}
+
+.timeline-name {
+
+    color: #243B5A;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    line-height: 1.45;
+}
+
+.timeline-info {
+
+    color: #7A8699;
+
+    font-size: 8px;
+
+    line-height: 1.45;
+
+    margin-top: 2px;
+}
+
+
+/* =========================
+   CATATAN
+========================= */
+
+.note {
+
+    margin-top: 12px;
+
+    padding: 10px 12px;
+
+    background: #F5F8FD;
+
+    border: 1px solid #DCE5F0;
+
+    border-radius: 10px;
+
+    color: #596A80;
+
+    font-size: 9px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #EAECF0;
+
+    color: #98A2B3;
+
+    font-size: 9px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        padding: 25px 16px;
+    }
+
+    .logo-area img {
+        width: 135px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .subtitle {
+        font-size: 11px;
+    }
+
+    .btn-register {
+        font-size: 14px;
+    }
+
+    .btn-search {
+        font-size: 12px;
+    }
+
+    .timeline-box {
+        max-height: 360px;
+    }
+
+}
+
+</style>
 </head>
 
 
@@ -539,15 +590,9 @@
 
     <div class="logo-area">
 
-        <!--
-        GANTI LOGO_URL DENGAN URL LOGO SOEDARSO
-        JIKA HTML DIHOSTING TERPISAH.
-        -->
-
         <img
-            src="https://drive.google.com/file/d/1WgGnL5kgto-SW3bTA6f4kSX2Sm3QEPno/view?usp=drive_link"
-            alt="Logo RSUD dr. Soedarso"
-            class="logo"
+            src="https://drive.google.com/uc?export=view&id=1WgGnL5kgto-SW3bTA6f4kSX2Sm3QEPno"
+            alt=""
         >
 
     </div>
@@ -573,7 +618,7 @@
 
 
     <!-- =========================
-         PENGUMUMAN PDF
+         PENGUMUMAN
     ========================= -->
 
     <div class="announcement">
@@ -602,7 +647,6 @@
             href="https://drive.google.com/file/d/1csFa_HB_jXV1gFTr5INE-rf6WxSe2h_3/view?usp=sharing"
             class="pdf-button"
             target="_blank"
-            rel="noopener noreferrer"
         >
             📖 Lihat
         </a>
@@ -611,7 +655,7 @@
 
 
     <!-- =========================
-         TOMBOL
+         TOMBOL UTAMA
     ========================= -->
 
     <div class="buttons">
@@ -623,7 +667,6 @@
             href="https://script.google.com/macros/s/AKfycby-dYEniWdUvMRpp4PhFmE6hioFwZdLTRneTk5A6SOO9Gm-l2wSfooxuKg2o1zCiwceag/exec"
             class="btn btn-register"
             target="_blank"
-            rel="noopener noreferrer"
         >
             📝 DAFTAR SEKARANG →
         </a>
@@ -632,14 +675,13 @@
         <!-- TELUSUR PENDAFTAR -->
 
         <!--
-        NANTI GANTI URL INI DENGAN URL GAS ANDA
+        NANTI GANTI URL INI
         -->
 
         <a
             href="TEMPEL_URL_GAS_TELUSUR_PENDAFTAR_DISINI"
             class="btn btn-search"
             target="_blank"
-            rel="noopener noreferrer"
         >
             👥 Telusur Jumlah Pendaftar Sementara →
         </a>
@@ -651,12 +693,11 @@
             href="https://docs.google.com/document/d/1p5yhGDzpYcAC9xEyYnbuc7x_g66RLvgtYE9vc2hifBA/export?format=docx"
             class="btn btn-template"
             target="_blank"
-            rel="noopener noreferrer"
         >
             📄 Template Surat Keterangan Bekerja
 
             <span class="template-jobs">
-                Khusus: Pengolah Data Akuntansi • Pengolah Data
+                Pengolah Data Akuntansi • Pengolah Data
             </span>
 
         </a>
@@ -856,10 +897,6 @@
                     Pengumuman Kelulusan
                 </div>
 
-                <div class="timeline-info">
-                    Tim Sekretariat Pansel.
-                </div>
-
             </div>
 
 
@@ -932,10 +969,6 @@
 
     </div>
 
-
-    <!-- =========================
-         FOOTER
-    ========================= -->
 
     <footer>
 
