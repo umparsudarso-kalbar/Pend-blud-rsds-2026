@@ -43,7 +43,7 @@ body {
 
     border-radius: 24px;
 
-    padding: 30px;
+    padding: 28px 30px;
 
     box-shadow: 0 25px 60px rgba(0,0,0,.30);
 
@@ -76,17 +76,15 @@ body {
 
 .logo-area {
     text-align: center;
-
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .logo-area img {
-    width: 165px;
+    width: 155px;
     max-width: 55%;
     height: auto;
 
     display: block;
-
     margin: 0 auto;
 }
 
@@ -94,19 +92,6 @@ body {
 /* =========================
    JUDUL
 ========================= */
-
-.portal {
-    text-align: center;
-
-    font-size: 10px;
-    font-weight: 700;
-
-    letter-spacing: 2px;
-
-    color: #0B5ED7;
-
-    margin-bottom: 5px;
-}
 
 h1 {
     text-align: center;
@@ -117,7 +102,7 @@ h1 {
 
     line-height: 1.35;
 
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .subtitle {
@@ -125,11 +110,112 @@ h1 {
 
     color: #667085;
 
-    font-size: 12px;
+    font-size: 11px;
 
     line-height: 1.6;
 
-    margin-bottom: 20px;
+    margin-bottom: 14px;
+}
+
+
+/* =========================
+   PENGINGAT WAKTU
+========================= */
+
+.countdown-card {
+
+    background: linear-gradient(
+        135deg,
+        #F0F6FF,
+        #E7F0FF
+    );
+
+    border: 1px solid #C9DCF7;
+
+    border-radius: 14px;
+
+    padding: 13px 15px;
+
+    text-align: center;
+
+    margin-bottom: 14px;
+}
+
+.countdown-label {
+
+    color: #53657D;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    margin-bottom: 3px;
+}
+
+.countdown-status {
+
+    color: #0B5ED7;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-bottom: 6px;
+}
+
+.countdown {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 7px;
+}
+
+.time-box {
+
+    min-width: 52px;
+
+    padding: 6px 4px;
+
+    background: white;
+
+    border-radius: 8px;
+
+    border: 1px solid #D6E3F3;
+}
+
+.time-number {
+
+    display: block;
+
+    color: #102A56;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    line-height: 1.1;
+}
+
+.time-label {
+
+    display: block;
+
+    color: #8996A8;
+
+    font-size: 7px;
+
+    margin-top: 2px;
+}
+
+.countdown-note {
+
+    margin-top: 6px;
+
+    color: #718096;
+
+    font-size: 8px;
 }
 
 
@@ -146,15 +232,15 @@ h1 {
 
     gap: 12px;
 
-    background: #F5F8FD;
+    background: #F7F9FC;
 
-    border: 1px solid #E0E8F3;
+    border: 1px solid #E0E7F0;
 
     border-radius: 14px;
 
-    padding: 12px 14px;
+    padding: 11px 13px;
 
-    margin-bottom: 13px;
+    margin-bottom: 12px;
 }
 
 .announcement-info {
@@ -162,13 +248,13 @@ h1 {
     display: flex;
     align-items: center;
 
-    gap: 10px;
+    gap: 9px;
 }
 
 .announcement-icon {
 
-    width: 36px;
-    height: 36px;
+    width: 35px;
+    height: 35px;
 
     flex-shrink: 0;
 
@@ -180,14 +266,14 @@ h1 {
 
     border-radius: 9px;
 
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .announcement-title {
 
     color: #263B5A;
 
-    font-size: 11px;
+    font-size: 10px;
 
     font-weight: 700;
 }
@@ -196,7 +282,7 @@ h1 {
 
     color: #7A8699;
 
-    font-size: 9px;
+    font-size: 8px;
 
     margin-top: 2px;
 }
@@ -205,7 +291,7 @@ h1 {
 
     flex-shrink: 0;
 
-    padding: 8px 12px;
+    padding: 7px 11px;
 
     border-radius: 8px;
 
@@ -217,7 +303,7 @@ h1 {
 
     text-decoration: none;
 
-    font-size: 9px;
+    font-size: 8px;
 
     font-weight: 600;
 }
@@ -225,7 +311,6 @@ h1 {
 .pdf-button:hover {
 
     background: #0B5ED7;
-
     color: white;
 }
 
@@ -240,7 +325,7 @@ h1 {
 
     flex-direction: column;
 
-    gap: 10px;
+    gap: 9px;
 
     margin-top: 8px;
 }
@@ -259,13 +344,11 @@ h1 {
 }
 
 
-/* =========================
-   DAFTAR SEKARANG
-========================= */
+/* DAFTAR SEKARANG */
 
 .btn-register {
 
-    padding: 17px;
+    padding: 16px;
 
     background: linear-gradient(
         135deg,
@@ -292,13 +375,11 @@ h1 {
 }
 
 
-/* =========================
-   TELUSUR PENDAFTAR
-========================= */
+/* TELUSUR */
 
 .btn-search {
 
-    padding: 14px;
+    padding: 13px;
 
     background: #EAF2FF;
 
@@ -306,7 +387,7 @@ h1 {
 
     color: #0B5ED7;
 
-    font-size: 13px;
+    font-size: 12px;
 
     font-weight: 700;
 }
@@ -319,13 +400,11 @@ h1 {
 }
 
 
-/* =========================
-   TEMPLATE
-========================= */
+/* TEMPLATE */
 
 .btn-template {
 
-    padding: 10px;
+    padding: 9px;
 
     background: #FAFBFC;
 
@@ -351,9 +430,9 @@ h1 {
 
     display: block;
 
-    margin-top: 3px;
+    margin-top: 2px;
 
-    font-size: 8px;
+    font-size: 7px;
 
     color: #98A2B3;
 
@@ -367,13 +446,13 @@ h1 {
 
 .section-title {
 
-    margin-top: 25px;
+    margin-top: 23px;
 
-    margin-bottom: 10px;
+    margin-bottom: 9px;
 
     color: #102A56;
 
-    font-size: 17px;
+    font-size: 16px;
 
     font-weight: 700;
 }
@@ -384,7 +463,7 @@ h1 {
 
     overflow-y: auto;
 
-    padding: 13px;
+    padding: 12px;
 
     background: #F7F9FC;
 
@@ -394,19 +473,15 @@ h1 {
 }
 
 .timeline-box::-webkit-scrollbar {
-
     width: 5px;
 }
 
 .timeline-box::-webkit-scrollbar-track {
-
     background: #EDF1F6;
 }
 
 .timeline-box::-webkit-scrollbar-thumb {
-
     background: #B5C9E2;
-
     border-radius: 10px;
 }
 
@@ -429,7 +504,7 @@ h1 {
 
     border-radius: 11px;
 
-    padding: 11px 13px;
+    padding: 10px 12px;
 
     margin-bottom: 8px;
 }
@@ -446,7 +521,7 @@ h1 {
 
     left: -26px;
 
-    top: 15px;
+    top: 14px;
 
     width: 9px;
     height: 9px;
@@ -501,9 +576,9 @@ h1 {
 
 .note {
 
-    margin-top: 12px;
+    margin-top: 11px;
 
-    padding: 10px 12px;
+    padding: 9px 11px;
 
     background: #F5F8FD;
 
@@ -513,7 +588,7 @@ h1 {
 
     color: #596A80;
 
-    font-size: 9px;
+    font-size: 8px;
 
     line-height: 1.6;
 }
@@ -527,15 +602,15 @@ footer {
 
     text-align: center;
 
-    margin-top: 20px;
+    margin-top: 18px;
 
-    padding-top: 15px;
+    padding-top: 13px;
 
     border-top: 1px solid #EAECF0;
 
     color: #98A2B3;
 
-    font-size: 9px;
+    font-size: 8px;
 }
 
 
@@ -546,11 +621,11 @@ footer {
 @media (max-width: 480px) {
 
     .container {
-        padding: 25px 16px;
+        padding: 23px 15px;
     }
 
     .logo-area img {
-        width: 135px;
+        width: 130px;
     }
 
     h1 {
@@ -558,19 +633,23 @@ footer {
     }
 
     .subtitle {
-        font-size: 11px;
+        font-size: 10px;
+    }
+
+    .time-box {
+        min-width: 48px;
+    }
+
+    .time-number {
+        font-size: 15px;
     }
 
     .btn-register {
         font-size: 14px;
     }
 
-    .btn-search {
-        font-size: 12px;
-    }
-
     .timeline-box {
-        max-height: 360px;
+        max-height: 350px;
     }
 
 }
@@ -585,13 +664,13 @@ footer {
 
 
     <!-- =========================
-         LOGO SOEDARSO
+         LOGO
     ========================= -->
 
     <div class="logo-area">
 
         <img
-            src="https://drive.google.com/uc?export=view&id=1WgGnL5kgto-SW3bTA6f4kSX2Sm3QEPno"
+            src="https://lh3.googleusercontent.com/d/1WgGnL5kgto-SW3bTA6f4kSX2Sm3QEPno"
             alt=""
         >
 
@@ -602,23 +681,64 @@ footer {
          JUDUL
     ========================= -->
 
-    <div class="portal">
-        PORTAL RESMI
-    </div>
-
     <h1>
         Pendaftaran Tenaga BLUD<br>
         RSUD dr. Soedarso 2026
     </h1>
 
     <p class="subtitle">
-        Silakan membaca pengumuman resmi dan memperhatikan
-        jadwal pendaftaran sebelum melakukan pendaftaran.
+        Portal informasi dan pendaftaran resmi Tenaga BLUD
+        RSUD dr. Soedarso Tahun 2026
     </p>
 
 
     <!-- =========================
-         PENGUMUMAN
+         PENGINGAT OTOMATIS
+    ========================= -->
+
+    <div class="countdown-card">
+
+        <div class="countdown-label" id="countdownLabel">
+            INFORMASI WAKTU PENDAFTARAN
+        </div>
+
+        <div class="countdown-status" id="countdownStatus">
+            Memuat waktu...
+        </div>
+
+        <div class="countdown" id="countdown">
+
+            <div class="time-box">
+                <span class="time-number" id="days">00</span>
+                <span class="time-label">HARI</span>
+            </div>
+
+            <div class="time-box">
+                <span class="time-number" id="hours">00</span>
+                <span class="time-label">JAM</span>
+            </div>
+
+            <div class="time-box">
+                <span class="time-number" id="minutes">00</span>
+                <span class="time-label">MENIT</span>
+            </div>
+
+            <div class="time-box">
+                <span class="time-number" id="seconds">00</span>
+                <span class="time-label">DETIK</span>
+            </div>
+
+        </div>
+
+        <div class="countdown-note" id="countdownNote">
+            Waktu mengikuti WIB
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         PENGUMUMAN PDF
     ========================= -->
 
     <div class="announcement">
@@ -647,6 +767,7 @@ footer {
             href="https://drive.google.com/file/d/1csFa_HB_jXV1gFTr5INE-rf6WxSe2h_3/view?usp=sharing"
             class="pdf-button"
             target="_blank"
+            rel="noopener noreferrer"
         >
             📖 Lihat
         </a>
@@ -667,21 +788,23 @@ footer {
             href="https://script.google.com/macros/s/AKfycby-dYEniWdUvMRpp4PhFmE6hioFwZdLTRneTk5A6SOO9Gm-l2wSfooxuKg2o1zCiwceag/exec"
             class="btn btn-register"
             target="_blank"
+            rel="noopener noreferrer"
         >
             📝 DAFTAR SEKARANG →
         </a>
 
 
-        <!-- TELUSUR PENDAFTAR -->
+        <!-- TELUSUR JUMLAH PENDAFTAR -->
 
         <!--
-        NANTI GANTI URL INI
+        GANTI URL DI BAWAH INI DENGAN URL GAS ANDA
         -->
 
         <a
             href="TEMPEL_URL_GAS_TELUSUR_PENDAFTAR_DISINI"
             class="btn btn-search"
             target="_blank"
+            rel="noopener noreferrer"
         >
             👥 Telusur Jumlah Pendaftar Sementara →
         </a>
@@ -693,6 +816,7 @@ footer {
             href="https://docs.google.com/document/d/1p5yhGDzpYcAC9xEyYnbuc7x_g66RLvgtYE9vc2hifBA/export?format=docx"
             class="btn btn-template"
             target="_blank"
+            rel="noopener noreferrer"
         >
             📄 Template Surat Keterangan Bekerja
 
@@ -719,7 +843,6 @@ footer {
 
 
             <div class="timeline-item">
-
                 <div class="timeline-date">
                     4 September 2026
                 </div>
@@ -731,12 +854,10 @@ footer {
                 <div class="timeline-info">
                     Informasi resmi melalui media resmi RSUD dr. Soedarso.
                 </div>
-
             </div>
 
 
             <div class="timeline-item">
-
                 <div class="timeline-date">
                     4 – 11 September 2026
                 </div>
@@ -749,12 +870,10 @@ footer {
                 <div class="timeline-info">
                     Pendaftaran melalui link. Pukul 24.00 WIB pendaftaran ditutup.
                 </div>
-
             </div>
 
 
             <div class="timeline-item">
-
                 <div class="timeline-date">
                     5 – 12 September 2026
                 </div>
@@ -766,12 +885,10 @@ footer {
                 <div class="timeline-info">
                     Seleksi Administrasi — Tim Sekretariat Pansel.
                 </div>
-
             </div>
 
 
             <div class="timeline-item">
-
                 <div class="timeline-date">
                     14 September 2026
                 </div>
@@ -779,12 +896,10 @@ footer {
                 <div class="timeline-name">
                     Pengumuman Kelulusan Seleksi Administrasi
                 </div>
-
             </div>
 
 
             <div class="timeline-item">
-
                 <div class="timeline-date">
                     14 – 15 September 2026
                 </div>
@@ -796,12 +911,10 @@ footer {
                 <div class="timeline-info">
                     Pukul 16.00 WIB masa sanggah ditutup.
                 </div>
-
             </div>
 
 
             <div class="timeline-item">
-
                 <div class="timeline-date">
                     14 – 15 September 2026
                 </div>
@@ -813,12 +926,10 @@ footer {
                 <div class="timeline-info">
                     Tim Sekretariat Pansel.
                 </div>
-
             </div>
 
 
             <div class="timeline-item">
-
                 <div class="timeline-date">
                     17 September 2026
                 </div>
@@ -831,12 +942,10 @@ footer {
                 <div class="timeline-info">
                     Computer Assisted Test (CAT).
                 </div>
-
             </div>
 
 
             <div class="timeline-item">
-
                 <div class="timeline-date">
                     21 – 25 September 2026
                 </div>
@@ -849,12 +958,10 @@ footer {
                 <div class="timeline-info">
                     Sesuai jadwal pelaksanaan CAT yang telah diumumkan.
                 </div>
-
             </div>
 
 
             <div class="timeline-item">
-
                 <div class="timeline-date">
                     28 September 2026
                 </div>
@@ -866,12 +973,10 @@ footer {
                 <div class="timeline-info">
                     Termasuk penilaian administrasi dan kompetensi.
                 </div>
-
             </div>
 
 
             <div class="timeline-item">
-
                 <div class="timeline-date">
                     29 – 30 September 2026
                 </div>
@@ -883,12 +988,10 @@ footer {
                 <div class="timeline-info">
                     Tim Sekretariat Pansel dan MCU.
                 </div>
-
             </div>
 
 
             <div class="timeline-item">
-
                 <div class="timeline-date">
                     2 Oktober 2026
                 </div>
@@ -897,11 +1000,13 @@ footer {
                     Pengumuman Kelulusan
                 </div>
 
+                <div class="timeline-info">
+                    Tim Sekretariat Pansel.
+                </div>
             </div>
 
 
             <div class="timeline-item">
-
                 <div class="timeline-date">
                     5 Oktober 2026
                 </div>
@@ -913,12 +1018,10 @@ footer {
                 <div class="timeline-info">
                     Tim Sekretariat Pansel.
                 </div>
-
             </div>
 
 
             <div class="timeline-item">
-
                 <div class="timeline-date">
                     6 Oktober 2026
                 </div>
@@ -930,12 +1033,10 @@ footer {
                 <div class="timeline-info">
                     Tim Sekretariat Pansel.
                 </div>
-
             </div>
 
 
             <div class="timeline-item">
-
                 <div class="timeline-date">
                     7 Oktober – 7 November 2026
                 </div>
@@ -947,7 +1048,6 @@ footer {
                 <div class="timeline-info">
                     Bagian/Bidang.
                 </div>
-
             </div>
 
 
@@ -970,6 +1070,10 @@ footer {
     </div>
 
 
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
     <footer>
 
         © 2026 RSUD dr. Soedarso
@@ -978,8 +1082,169 @@ footer {
 
     </footer>
 
-
 </div>
+
+
+<!-- =========================
+     JAVASCRIPT COUNTDOWN
+========================= -->
+
+<script>
+
+/*
+==========================================
+   WAKTU PENDAFTARAN
+==========================================
+
+   Mulai:
+   4 September 2026 pukul 00:00 WIB
+
+   Tutup:
+   12 September 2026 pukul 00:00 WIB
+   (sama dengan 11 September 2026 pukul 24:00 WIB)
+
+==========================================
+*/
+
+const tanggalMulai =
+    new Date("2026-09-04T00:00:00+07:00").getTime();
+
+const tanggalTutup =
+    new Date("2026-09-12T00:00:00+07:00").getTime();
+
+
+function duaDigit(angka) {
+
+    return String(angka).padStart(2, "0");
+
+}
+
+
+function updateCountdown() {
+
+    const sekarang = new Date().getTime();
+
+
+    /* =========================
+       SEBELUM PENDAFTARAN
+    ========================= */
+
+    if (sekarang < tanggalMulai) {
+
+        const jarak = tanggalMulai - sekarang;
+
+        tampilkanWaktu(jarak);
+
+        document.getElementById("countdownLabel")
+            .innerText = "PERSIAPAN PENDAFTARAN";
+
+        document.getElementById("countdownStatus")
+            .innerText = "Pendaftaran Dibuka Dalam";
+
+        document.getElementById("countdownNote")
+            .innerText =
+            "Pendaftaran mulai 4 September 2026 • 00.00 WIB";
+
+        return;
+    }
+
+
+    /* =========================
+       SAAT PENDAFTARAN
+    ========================= */
+
+    if (sekarang < tanggalTutup) {
+
+        const jarak = tanggalTutup - sekarang;
+
+        tampilkanWaktu(jarak);
+
+        document.getElementById("countdownLabel")
+            .innerText = "STATUS PENDAFTARAN";
+
+        document.getElementById("countdownStatus")
+            .innerText = "🟢 Pendaftaran Sedang Dibuka";
+
+        document.getElementById("countdownNote")
+            .innerText =
+            "Sisa waktu pendaftaran • ditutup 11 September 2026 pukul 24.00 WIB";
+
+        return;
+    }
+
+
+    /* =========================
+       SETELAH DITUTUP
+    ========================= */
+
+    document.getElementById("countdownLabel")
+        .innerText = "STATUS PENDAFTARAN";
+
+    document.getElementById("countdownStatus")
+        .innerText = "🔴 Pendaftaran Telah Ditutup";
+
+    document.getElementById("countdownNote")
+        .innerText =
+        "Pendaftaran telah berakhir pada 11 September 2026 pukul 24.00 WIB";
+
+
+    document.getElementById("days").innerText = "00";
+    document.getElementById("hours").innerText = "00";
+    document.getElementById("minutes").innerText = "00";
+    document.getElementById("seconds").innerText = "00";
+
+}
+
+
+function tampilkanWaktu(jarak) {
+
+    const hari =
+        Math.floor(jarak / (1000 * 60 * 60 * 24));
+
+    const jam =
+        Math.floor(
+            (jarak % (1000 * 60 * 60 * 24))
+            / (1000 * 60 * 60)
+        );
+
+    const menit =
+        Math.floor(
+            (jarak % (1000 * 60 * 60))
+            / (1000 * 60)
+        );
+
+    const detik =
+        Math.floor(
+            (jarak % (1000 * 60))
+            / 1000
+        );
+
+
+    document.getElementById("days").innerText =
+        duaDigit(hari);
+
+    document.getElementById("hours").innerText =
+        duaDigit(jam);
+
+    document.getElementById("minutes").innerText =
+        duaDigit(menit);
+
+    document.getElementById("seconds").innerText =
+        duaDigit(detik);
+
+}
+
+
+/* Jalankan langsung */
+
+updateCountdown();
+
+
+/* Perbarui setiap 1 detik */
+
+setInterval(updateCountdown, 1000);
+
+</script>
 
 </body>
 </html>
