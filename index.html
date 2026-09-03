@@ -62,9 +62,9 @@
         }
 
 
-        /* =========================
-           NOTICE PEMBUKAAN
-        ========================= */
+        /* =================================================
+           NOTICE PEMBUKAAN / SISA WAKTU
+        ================================================= */
 
         .opening-notice {
             background: linear-gradient(
@@ -92,14 +92,12 @@
             text-transform: uppercase;
 
             opacity: .9;
-
             margin-bottom: 4px;
         }
 
         .notice-date {
             font-size: 15px;
             font-weight: 700;
-
             margin-bottom: 10px;
         }
 
@@ -133,15 +131,19 @@
         }
 
         .opened {
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 700;
-            letter-spacing: .5px;
+        }
+
+        .closed {
+            font-size: 16px;
+            font-weight: 700;
         }
 
 
-        /* =========================
+        /* =================================================
            HEADER
-        ========================= */
+        ================================================= */
 
         .logo {
             text-align: center;
@@ -185,9 +187,9 @@
         }
 
 
-        /* =========================
+        /* =================================================
            PENGUMUMAN
-        ========================= */
+        ================================================= */
 
         .announcement {
             background: linear-gradient(
@@ -202,7 +204,7 @@
 
             padding: 20px;
 
-            margin-bottom: 16px;
+            margin-bottom: 14px;
         }
 
         .announcement h2 {
@@ -251,9 +253,99 @@
         }
 
 
-        /* =========================
+        /* =================================================
+           NOTICE KHUSUS JABATAN
+        ================================================= */
+
+        .position-notice {
+            background: #FFF9E8;
+
+            border: 1px solid #F0DEA1;
+
+            border-radius: 15px;
+
+            padding: 16px 18px;
+
+            margin-bottom: 14px;
+        }
+
+        .position-title {
+            color: #725600;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            margin-bottom: 8px;
+        }
+
+        .position-text {
+            color: #6F5A17;
+
+            font-size: 11px;
+            line-height: 1.6;
+
+            margin-bottom: 6px;
+        }
+
+        .position-list {
+            padding-left: 18px;
+
+            color: #604D0B;
+
+            font-size: 11px;
+            line-height: 1.8;
+        }
+
+
+        /* =================================================
+           TOMBOL TAMBAHAN
+        ================================================= */
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+
+            margin-bottom: 14px;
+        }
+
+        .btn-secondary {
+            display: block;
+
+            width: 100%;
+
+            text-align: center;
+
+            padding: 13px;
+
+            border-radius: 12px;
+
+            background: white;
+
+            color: #0B5ED7;
+
+            border: 1px solid #C9DCF5;
+
+            text-decoration: none;
+
+            font-size: 12px;
+            font-weight: 600;
+
+            transition: .25s;
+        }
+
+        .btn-secondary:hover {
+            background: #EEF5FF;
+
+            border-color: #0B5ED7;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =================================================
            TOMBOL DAFTAR
-        ========================= */
+        ================================================= */
 
         .btn-primary {
             display: block;
@@ -295,9 +387,9 @@
         }
 
 
-        /* =========================
+        /* =================================================
            TIMELINE
-        ========================= */
+        ================================================= */
 
         .section-title {
             color: #102A56;
@@ -317,12 +409,10 @@
 
             padding: 15px;
 
-            /* AREA SCROLL */
-            max-height: 440px;
+            /* SCROLL */
+            max-height: 430px;
             overflow-y: auto;
         }
-
-        /* Scrollbar */
 
         .timeline-box::-webkit-scrollbar {
             width: 6px;
@@ -413,22 +503,22 @@
         }
 
 
-        /* =========================
+        /* =================================================
            CATATAN
-        ========================= */
+        ================================================= */
 
         .note {
             margin-top: 15px;
 
             padding: 12px 14px;
 
-            background: #FFF9E8;
+            background: #F3F7FF;
 
-            border: 1px solid #F2E2A8;
+            border: 1px solid #D7E5F7;
 
             border-radius: 11px;
 
-            color: #765B00;
+            color: #52637A;
 
             font-size: 10px;
 
@@ -436,9 +526,9 @@
         }
 
 
-        /* =========================
+        /* =================================================
            FOOTER
-        ========================= */
+        ================================================= */
 
         footer {
             text-align: center;
@@ -455,9 +545,9 @@
         }
 
 
-        /* =========================
+        /* =================================================
            MOBILE
-        ========================= */
+        ================================================= */
 
         @media (max-width: 480px) {
 
@@ -504,17 +594,17 @@
 <div class="container">
 
 
-    <!-- ==========================================
+    <!-- =================================================
          NOTICE PEMBUKAAN
-    =========================================== -->
+    ================================================= -->
 
     <div class="opening-notice">
 
-        <div class="notice-label">
+        <div id="noticeLabel" class="notice-label">
             📢 Pendaftaran Dibuka
         </div>
 
-        <div class="notice-date">
+        <div id="noticeDate" class="notice-date">
             4 – 12 September 2026
         </div>
 
@@ -545,9 +635,9 @@
     </div>
 
 
-    <!-- ==========================================
+    <!-- =================================================
          HEADER
-    =========================================== -->
+    ================================================= -->
 
     <div class="logo">
         🏥
@@ -568,9 +658,9 @@
     </p>
 
 
-    <!-- ==========================================
-         PENGUMUMAN PDF
-    =========================================== -->
+    <!-- =================================================
+         PENGUMUMAN
+    ================================================= -->
 
     <div class="announcement">
 
@@ -595,9 +685,67 @@
     </div>
 
 
-    <!-- ==========================================
-         TOMBOL PENDAFTARAN
-    =========================================== -->
+    <!-- =================================================
+         NOTICE KHUSUS JABATAN
+    ================================================= -->
+
+    <div class="position-notice">
+
+        <div class="position-title">
+            ⭐ KHUSUS PELAMAR JABATAN
+        </div>
+
+        <div class="position-text">
+            Notice ini diperuntukkan bagi pelamar pada jabatan:
+        </div>
+
+        <ul class="position-list">
+            <li>Pengolah Data Akuntansi</li>
+            <li>Pengolah Data</li>
+        </ul>
+
+    </div>
+
+
+    <!-- =================================================
+         TOMBOL TAMBAHAN
+    ================================================= -->
+
+    <div class="button-group">
+
+        <!-- Template Surat Keterangan Bekerja -->
+        <!-- LINK GOOGLE DOCS DIUBAH MENJADI LINK DOWNLOAD DOCX -->
+
+        <a
+            href="https://docs.google.com/document/d/1p5yhGDzpYcAC9xEyYnbuc7x_g66RLvgtYE9vc2hifBA/export?format=docx"
+            class="btn-secondary"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            📄 Template Surat Keterangan Bekerja
+        </a>
+
+
+        <!--
+            NANTI GANTI URL INI DENGAN URL GOOGLE APPS SCRIPT
+            UNTUK TELUSUR JUMLAH PENDAFTAR
+        -->
+
+        <a
+            href="TEMPEL_URL_GAS_TELUSUR_PENDAFTAR_DISINI"
+            class="btn-secondary"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            👥 Telusur Jumlah Pendaftar Sementara
+        </a>
+
+    </div>
+
+
+    <!-- =================================================
+         TOMBOL DAFTAR
+    ================================================= -->
 
     <a
         href="https://script.google.com/macros/s/AKfycby-dYEniWdUvMRpp4PhFmE6hioFwZdLTRneTk5A6SOO9Gm-l2wSfooxuKg2o1zCiwceag/exec"
@@ -609,9 +757,9 @@
     </a>
 
 
-    <!-- ==========================================
+    <!-- =================================================
          TIMELINE LENGKAP
-    =========================================== -->
+    ================================================= -->
 
     <div class="section-title">
         📅 Timeline Pendaftaran
@@ -623,240 +771,185 @@
 
 
             <div class="timeline-item">
-
                 <div class="timeline-date">
                     4 September 2026
                 </div>
-
                 <div class="timeline-name">
                     Pengumuman Pendaftaran
                 </div>
-
                 <div class="timeline-info">
                     Informasi resmi melalui media resmi RSUD dr. Soedarso.
                 </div>
-
             </div>
 
 
             <div class="timeline-item">
-
                 <div class="timeline-date">
                     4 – 11 September 2026
                 </div>
-
                 <div class="timeline-name">
                     Pelamar memasukkan berkas Lamaran
-                    (Seleksi Administrasi)
+                    (Seleksi Administrasi) Pendaftaran melalui link
                 </div>
-
                 <div class="timeline-info">
-                    Pendaftaran melalui link. Pukul 24.00 WIB pendaftaran ditutup.
+                    Pukul 24.00 WIB pendaftaran ditutup.
                 </div>
-
             </div>
 
 
             <div class="timeline-item">
-
                 <div class="timeline-date">
                     5 – 12 September 2026
                 </div>
-
                 <div class="timeline-name">
                     Verifikasi dan Validasi Berkas
                     Seleksi Administrasi
                 </div>
-
                 <div class="timeline-info">
                     Tim Sekretariat Pansel.
                 </div>
-
             </div>
 
 
             <div class="timeline-item">
-
                 <div class="timeline-date">
                     14 September 2026
                 </div>
-
                 <div class="timeline-name">
                     Pengumuman Kelulusan Seleksi Administrasi
                 </div>
-
             </div>
 
 
             <div class="timeline-item">
-
                 <div class="timeline-date">
                     14 – 15 September 2026
                 </div>
-
                 <div class="timeline-name">
                     Masa Sanggah
                 </div>
-
                 <div class="timeline-info">
                     Pukul 16.00 WIB masa sanggah ditutup.
                 </div>
-
             </div>
 
 
             <div class="timeline-item">
-
                 <div class="timeline-date">
                     14 – 15 September 2026
                 </div>
-
                 <div class="timeline-name">
                     Jawab Sanggah
                 </div>
-
                 <div class="timeline-info">
                     Tim Sekretariat Pansel.
                 </div>
-
             </div>
 
 
             <div class="timeline-item">
-
                 <div class="timeline-date">
                     17 September 2026
                 </div>
-
                 <div class="timeline-name">
                     Pengumuman Kelulusan Seleksi Administrasi
                     dan Jadwal Pelaksanaan CAT
                 </div>
-
                 <div class="timeline-info">
                     Computer Assisted Test (CAT).
                 </div>
-
             </div>
 
 
             <div class="timeline-item">
-
                 <div class="timeline-date">
                     21 – 25 September 2026
                 </div>
-
                 <div class="timeline-name">
                     Pelaksanaan CAT
                     (Computer Assisted Test)
                 </div>
-
                 <div class="timeline-info">
                     Sesuai jadwal pelaksanaan CAT yang telah diumumkan.
                 </div>
-
             </div>
 
 
             <div class="timeline-item">
-
                 <div class="timeline-date">
                     28 September 2026
                 </div>
-
                 <div class="timeline-name">
                     Pengumuman Hasil CAT
                 </div>
-
                 <div class="timeline-info">
                     Termasuk penilaian administrasi dan kompetensi.
                 </div>
-
             </div>
 
 
             <div class="timeline-item">
-
                 <div class="timeline-date">
                     29 – 30 September 2026
                 </div>
-
                 <div class="timeline-name">
                     Pemeriksaan Kesehatan Jasmani dan Rohani
                 </div>
-
                 <div class="timeline-info">
                     Tim Sekretariat Pansel dan MCU.
                 </div>
-
             </div>
 
 
             <div class="timeline-item">
-
                 <div class="timeline-date">
                     2 Oktober 2026
                 </div>
-
                 <div class="timeline-name">
                     Pengumuman Kelulusan
                 </div>
-
                 <div class="timeline-info">
                     Tim Sekretariat Pansel.
                 </div>
-
             </div>
 
 
             <div class="timeline-item">
-
                 <div class="timeline-date">
                     5 Oktober 2026
                 </div>
-
                 <div class="timeline-name">
                     Pemberkasan
                 </div>
-
                 <div class="timeline-info">
                     Tim Sekretariat Pansel.
                 </div>
-
             </div>
 
 
             <div class="timeline-item">
-
                 <div class="timeline-date">
                     6 Oktober 2026
                 </div>
-
                 <div class="timeline-name">
                     Orientasi Umum
                 </div>
-
                 <div class="timeline-info">
                     Tim Sekretariat Pansel.
                 </div>
-
             </div>
 
 
             <div class="timeline-item">
-
                 <div class="timeline-date">
                     7 Oktober – 7 November 2026
                 </div>
-
                 <div class="timeline-name">
                     Orientasi Khusus
                 </div>
-
                 <div class="timeline-info">
                     Bagian/Bidang.
                 </div>
-
             </div>
 
 
@@ -865,15 +958,17 @@
     </div>
 
 
-    <!-- ==========================================
+    <!-- =================================================
          CATATAN
-    =========================================== -->
+    ================================================= -->
 
     <div class="note">
 
-        <strong>ℹ️ Perhatian:</strong>
-        Peserta wajib membaca pengumuman resmi dan mengikuti
-        seluruh tahapan sesuai jadwal yang telah ditetapkan.
+        <strong>ℹ️ Perhatian:</strong><br>
+
+        Peserta wajib membaca pengumuman resmi,
+        menyiapkan dokumen yang dipersyaratkan,
+        dan mengikuti seluruh tahapan sesuai jadwal.
 
     </div>
 
@@ -881,51 +976,104 @@
     <!-- FOOTER -->
 
     <footer>
+
         © 2026 RSUD dr. Soedarso
         <br>
         Portal Pendaftaran Tenaga BLUD
+
     </footer>
 
 
 </div>
 
 
-<!-- ==========================================
-     COUNTDOWN OTOMATIS
-=========================================== -->
+<!-- =================================================
+     JAVASCRIPT COUNTDOWN
+================================================= -->
 
 <script>
 
     /*
-       Waktu pembukaan:
-       4 September 2026
-       Pukul 00:00 WIB
+        PEMBUKAAN:
+        4 September 2026 pukul 00.00 WIB
 
-       Waktu ditentukan berdasarkan zona WIB.
+        PENUTUPAN:
+        12 September 2026 pukul 00.00 WIB
+        (berarti sampai 11 September pukul 24.00 WIB)
     */
 
-    const openingTime = new Date("2026-09-04T00:00:00+07:00").getTime();
+    const openingTime =
+        new Date("2026-09-04T00:00:00+07:00").getTime();
+
+    const closingTime =
+        new Date("2026-09-12T00:00:00+07:00").getTime();
 
 
     function updateCountdown() {
 
         const now = new Date().getTime();
 
-        const distance = openingTime - now;
+        const countdown = document.getElementById("countdown");
+        const label = document.getElementById("noticeLabel");
+        const date = document.getElementById("noticeDate");
 
 
-        if (distance <= 0) {
+        /* =================================
+           SEBELUM PEMBUKAAN
+        ================================= */
 
-            document.getElementById("countdown").innerHTML =
-                '<div class="opened">🎉 PENDAFTARAN TELAH DIBUKA</div>';
+        if (now < openingTime) {
+
+            label.innerHTML = "📢 PENDAFTARAN AKAN DIBUKA";
+
+            date.innerHTML = "4 – 12 September 2026";
+
+            let distance = openingTime - now;
+
+            showTime(distance);
 
             return;
-
         }
 
 
+        /* =================================
+           SAAT PENDAFTARAN BERLANGSUNG
+        ================================= */
+
+        if (now >= openingTime && now < closingTime) {
+
+            label.innerHTML = "🟢 PENDAFTARAN SEDANG DIBUKA";
+
+            date.innerHTML = "Batas akhir: 12 September 2026 • 00.00 WIB";
+
+            let distance = closingTime - now;
+
+            showTime(distance);
+
+            return;
+        }
+
+
+        /* =================================
+           PENDAFTARAN DITUTUP
+        ================================= */
+
+        label.innerHTML = "🔴 PENDAFTARAN TELAH DITUTUP";
+
+        date.innerHTML = "Masa pendaftaran 4 – 11 September 2026";
+
+        countdown.innerHTML =
+            '<div class="closed">Terima kasih atas partisipasi Anda.</div>';
+
+    }
+
+
+    function showTime(distance) {
+
         const days =
-            Math.floor(distance / (1000 * 60 * 60 * 24));
+            Math.floor(
+                distance / (1000 * 60 * 60 * 24)
+            );
 
         const hours =
             Math.floor(
@@ -966,7 +1114,6 @@
     setInterval(updateCountdown, 1000);
 
 </script>
-
 
 </body>
 </html>
