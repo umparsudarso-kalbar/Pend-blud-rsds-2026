@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="id">
 <head>
 <meta charset="UTF-8">
@@ -119,7 +120,7 @@ h1 {
 
 
 /* =========================
-   PENGINGAT WAKTU
+   COUNTDOWN
 ========================= */
 
 .countdown-card {
@@ -220,102 +221,6 @@ h1 {
 
 
 /* =========================
-   PENGUMUMAN
-========================= */
-
-.announcement {
-
-    display: flex;
-
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 12px;
-
-    background: #F7F9FC;
-
-    border: 1px solid #E0E7F0;
-
-    border-radius: 14px;
-
-    padding: 11px 13px;
-
-    margin-bottom: 12px;
-}
-
-.announcement-info {
-
-    display: flex;
-    align-items: center;
-
-    gap: 9px;
-}
-
-.announcement-icon {
-
-    width: 35px;
-    height: 35px;
-
-    flex-shrink: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: #E7F0FF;
-
-    border-radius: 9px;
-
-    font-size: 16px;
-}
-
-.announcement-title {
-
-    color: #263B5A;
-
-    font-size: 10px;
-
-    font-weight: 700;
-}
-
-.announcement-text {
-
-    color: #7A8699;
-
-    font-size: 8px;
-
-    margin-top: 2px;
-}
-
-.pdf-button {
-
-    flex-shrink: 0;
-
-    padding: 7px 11px;
-
-    border-radius: 8px;
-
-    background: white;
-
-    border: 1px solid #C9D9EE;
-
-    color: #0B5ED7;
-
-    text-decoration: none;
-
-    font-size: 8px;
-
-    font-weight: 600;
-}
-
-.pdf-button:hover {
-
-    background: #0B5ED7;
-    color: white;
-}
-
-
-/* =========================
    TOMBOL
 ========================= */
 
@@ -344,7 +249,9 @@ h1 {
 }
 
 
-/* CEK BERKAS YANG DI UPLOAD */
+/* =========================
+   AJUKAN SANGGAHAN
+========================= */
 
 .btn-register {
 
@@ -374,69 +281,25 @@ h1 {
         0 13px 28px rgba(11,94,215,.48);
 }
 
+.sanggahan-info {
 
-/* TELUSUR */
+    margin-top: -2px;
 
-.btn-search {
+    padding: 9px 12px;
 
-    padding: 13px;
+    background: #F5F8FD;
 
-    background: #EAF2FF;
+    border: 1px solid #DCE5F0;
 
-    border: 1px solid #BBD3F2;
-
-    color: #0B5ED7;
-
-    font-size: 12px;
-
-    font-weight: 700;
-}
-
-.btn-search:hover {
-
-    background: #DCEBFF;
-
-    transform: translateY(-2px);
-}
-
-
-/* TEMPLATE */
-
-.btn-template {
-
-    padding: 9px;
-
-    background: #FAFBFC;
-
-    border: 1px solid #DCE3EB;
+    border-radius: 10px;
 
     color: #667085;
 
-    font-size: 9px;
+    font-size: 8px;
 
-    font-weight: 600;
-}
+    line-height: 1.6;
 
-.btn-template:hover {
-
-    background: #F2F6FA;
-
-    color: #0B5ED7;
-
-    border-color: #BBD3F2;
-}
-
-.template-jobs {
-
-    display: block;
-
-    margin-top: 2px;
-
-    font-size: 7px;
-
-    color: #98A2B3;
-
-    font-weight: 500;
+    text-align: center;
 }
 
 
@@ -482,6 +345,7 @@ h1 {
 
 .timeline-box::-webkit-scrollbar-thumb {
     background: #B5C9E2;
+
     border-radius: 10px;
 }
 
@@ -652,438 +516,402 @@ footer {
         max-height: 350px;
     }
 
+    .sanggahan-info {
+        font-size: 8px;
+    }
+
 }
 
 </style>
-</head>
 
+</head>
 
 <body>
 
 <div class="container">
 
-
-    <!-- =========================
-         LOGO
-    ========================= -->
-
-    <div class="logo-area">
-
-        <img
-            src="https://lh3.googleusercontent.com/d/1WgGnL5kgto-SW3bTA6f4kSX2Sm3QEPno"
-            alt=""
-        >
-
-    </div>
-
-
-    <!-- =========================
-         JUDUL
-    ========================= -->
-
-    <h1>
-        Pendaftaran Tenaga BLUD<br>
-        RSUD dr. Soedarso 2026
-    </h1>
-
-    <p class="subtitle">
-        Portal informasi dan pendaftaran resmi Tenaga BLUD
-        RSUD dr. Soedarso Tahun 2026
-    </p>
-
-
-    <!-- =========================
-         PENGINGAT OTOMATIS
-    ========================= -->
-
-    <div class="countdown-card">
-
-        <div class="countdown-label" id="countdownLabel">
-            INFORMASI WAKTU PENDAFTARAN
-        </div>
-
-        <div class="countdown-status" id="countdownStatus">
-            Memuat waktu...
-        </div>
-
-        <div class="countdown" id="countdown">
-
-            <div class="time-box">
-                <span class="time-number" id="days">00</span>
-                <span class="time-label">HARI</span>
-            </div>
-
-            <div class="time-box">
-                <span class="time-number" id="hours">00</span>
-                <span class="time-label">JAM</span>
-            </div>
-
-            <div class="time-box">
-                <span class="time-number" id="minutes">00</span>
-                <span class="time-label">MENIT</span>
-            </div>
-
-            <div class="time-box">
-                <span class="time-number" id="seconds">00</span>
-                <span class="time-label">DETIK</span>
-            </div>
-
-        </div>
-
-        <div class="countdown-note" id="countdownNote">
-            Waktu mengikuti WIB
-        </div>
-
-    </div>
-
-
-    <!-- =========================
-         PENGUMUMAN PDF
-    ========================= -->
-
-    <div class="announcement">
-
-        <div class="announcement-info">
-
-            <div class="announcement-icon">
-                📄
-            </div>
-
-            <div>
-
-                <div class="announcement-title">
-                    Pengumuman Rekrutmen
-                </div>
-
-                <div class="announcement-text">
-                    Dokumen resmi penerimaan Tenaga BLUD.
-                </div>
-
-            </div>
-
-        </div>
-
-        <a
-            href="https://drive.google.com/file/d/1JHg_OT7DUZvznmGaOECEDS5-dBVNsg0r/view?usp=sharing"
-            class="pdf-button"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            📖 Lihat
-        </a>
-
-    </div>
-
-
-    <!-- =========================
-         TOMBOL UTAMA
-    ========================= -->
-
-    <div class="buttons">
-
-
-        <!-- CEK HASIL VERIFIKASI -->
-
-        <a
-            href="https://script.google.com/macros/s/AKfycbwpU6mSfjguYjzWJgwt_t6D9KxL2vhJg8WtNa8kWXVhiHEvBsklxNJ-UGM2PTh8MxDovQ/exec"
-            class="btn btn-register"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            📝 CEK HASIL VERIFIKASI →
-        </a>
-
-
-        <!-- TELUSUR JUMLAH PENDAFTAR -->
-
-        <!--
-        GANTI URL DI BAWAH INI DENGAN URL GAS ANDA
-        -->
-
-        <a
-            href="https://script.google.com/macros/s/AKfycbxbcg3cwdC1UGe34BKxF-ihwsQflBun3NtXTSxypLdLRu1IjwdYLEHdjafeYlIJgEDYfg/exec"
-            class="btn btn-search"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            👥 Telusur Jumlah Pendaftar Sementara →
-        </a>
-
-
-        <!-- TEMPLATE SURAT -->
-
-        <a
-            href="https://docs.google.com/document/d/1p5yhGDzpYcAC9xEyYnbuc7x_g66RLvgtYE9vc2hifBA/export?format=docx"
-            class="btn btn-template"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            📄 Template Surat Keterangan Pengalaman Kerja
-
-            <span class="template-jobs">
-                Pengolah Data Akuntansi • Pengolah Data
-            </span>
-
-        </a>
-
-    </div>
-
-
-    <!-- =========================
-         TIMELINE
-    ========================= -->
-
-    <div class="section-title">
-        📅 Timeline Pendaftaran
-    </div>
-
-    <div class="timeline-box">
-
-        <div class="timeline">
-
-
-            <div class="timeline-item">
-                <div class="timeline-date">
-                    4 September 2026
-                </div>
-
-                <div class="timeline-name">
-                    Pengumuman Pendaftaran
-                </div>
-
-                <div class="timeline-info">
-                    Informasi resmi melalui media resmi RSUD dr. Soedarso.
-                </div>
-            </div>
-
-
-            <div class="timeline-item">
-                <div class="timeline-date">
-                    4 – 11 September 2026
-                </div>
-
-                <div class="timeline-name">
-                    Pelamar memasukkan berkas lamaran
-                    (Seleksi Administrasi)
-                </div>
-
-                <div class="timeline-info">
-                    Pendaftaran melalui link. Pukul 24.00 WIB pendaftaran ditutup.
-                </div>
-            </div>
-
-
-            <div class="timeline-item">
-                <div class="timeline-date">
-                    5 – 12 September 2026
-                </div>
-
-                <div class="timeline-name">
-                    Verifikasi dan Validasi Berkas
-                </div>
-
-                <div class="timeline-info">
-                    Seleksi Administrasi — Tim Sekretariat Pansel.
-                </div>
-            </div>
-
-
-            <div class="timeline-item">
-                <div class="timeline-date">
-                    14 September 2026
-                </div>
-
-                <div class="timeline-name">
-                    Pengumuman Kelulusan Seleksi Administrasi
-                </div>
-            </div>
-
-
-            <div class="timeline-item">
-                <div class="timeline-date">
-                    14 – 15 September 2026
-                </div>
-
-                <div class="timeline-name">
-                    Masa Sanggah
-                </div>
-
-                <div class="timeline-info">
-                    Pukul 16.00 WIB masa sanggah ditutup.
-                </div>
-            </div>
-
-
-            <div class="timeline-item">
-                <div class="timeline-date">
-                    14 – 15 September 2026
-                </div>
-
-                <div class="timeline-name">
-                    Jawab Sanggah
-                </div>
-
-                <div class="timeline-info">
-                    Tim Sekretariat Pansel.
-                </div>
-            </div>
-
-
-            <div class="timeline-item">
-                <div class="timeline-date">
-                    17 September 2026
-                </div>
-
-                <div class="timeline-name">
-                    Pengumuman Kelulusan Seleksi Administrasi
-                    dan Jadwal Pelaksanaan CAT
-                </div>
-
-                <div class="timeline-info">
-                    Computer Assisted Test (CAT).
-                </div>
-            </div>
-
-
-            <div class="timeline-item">
-                <div class="timeline-date">
-                    21 – 25 September 2026
-                </div>
-
-                <div class="timeline-name">
-                    Pelaksanaan CAT
-                    (Computer Assisted Test)
-                </div>
-
-                <div class="timeline-info">
-                    Sesuai jadwal pelaksanaan CAT yang telah diumumkan.
-                </div>
-            </div>
-
-
-            <div class="timeline-item">
-                <div class="timeline-date">
-                    28 September 2026
-                </div>
-
-                <div class="timeline-name">
-                    Pengumuman Hasil CAT
-                </div>
-
-                <div class="timeline-info">
-                    Termasuk penilaian administrasi dan kompetensi.
-                </div>
-            </div>
-
-
-            <div class="timeline-item">
-                <div class="timeline-date">
-                    29 – 30 September 2026
-                </div>
-
-                <div class="timeline-name">
-                    Pemeriksaan Kesehatan Jasmani dan Rohani
-                </div>
-
-                <div class="timeline-info">
-                    Tim Sekretariat Pansel dan MCU.
-                </div>
-            </div>
-
-
-            <div class="timeline-item">
-                <div class="timeline-date">
-                    2 Oktober 2026
-                </div>
-
-                <div class="timeline-name">
-                    Pengumuman Kelulusan
-                </div>
-
-                <div class="timeline-info">
-                    Tim Sekretariat Pansel.
-                </div>
-            </div>
-
-
-            <div class="timeline-item">
-                <div class="timeline-date">
-                    5 Oktober 2026
-                </div>
-
-                <div class="timeline-name">
-                    Pemberkasan
-                </div>
-
-                <div class="timeline-info">
-                    Tim Sekretariat Pansel.
-                </div>
-            </div>
-
-
-            <div class="timeline-item">
-                <div class="timeline-date">
-                    6 Oktober 2026
-                </div>
-
-                <div class="timeline-name">
-                    Orientasi Umum
-                </div>
-
-                <div class="timeline-info">
-                    Tim Sekretariat Pansel.
-                </div>
-            </div>
-
-
-            <div class="timeline-item">
-                <div class="timeline-date">
-                    7 Oktober – 7 November 2026
-                </div>
-
-                <div class="timeline-name">
-                    Orientasi Khusus
-                </div>
-
-                <div class="timeline-info">
-                    Bagian/Bidang.
-                </div>
-            </div>
-
-
-        </div>
-
-    </div>
-
-
-    <!-- =========================
-         CATATAN
-    ========================= -->
-
-    <div class="note">
-
-        <strong>ℹ️ Perhatian:</strong>
-        Peserta wajib membaca pengumuman resmi,
-        menyiapkan dokumen yang dipersyaratkan,
-        dan mengikuti seluruh tahapan sesuai jadwal.
-
-    </div>
-
-
-    <!-- =========================
-         FOOTER
-    ========================= -->
-
-    <footer>
-
-        © 2026 RSUD dr. Soedarso
-        <br>
-        Portal Pendaftaran Tenaga BLUD
-
-    </footer>
+```
+<!-- =========================
+     LOGO
+========================= -->
+
+<div class="logo-area">
+
+    <img
+        src="https://lh3.googleusercontent.com/d/1WgGnL5kgto-SW3bTA6f4kSX2Sm3QEPno"
+        alt="Logo RSUD dr. Soedarso"
+    >
 
 </div>
 
+
+<!-- =========================
+     JUDUL
+========================= -->
+
+<h1>
+    Pendaftaran Tenaga BLUD<br>
+    RSUD dr. Soedarso 2026
+</h1>
+
+<p class="subtitle">
+    Portal informasi dan pendaftaran resmi Tenaga BLUD
+    RSUD dr. Soedarso Tahun 2026
+</p>
+
+
+<!-- =========================
+     COUNTDOWN
+========================= -->
+
+<div class="countdown-card">
+
+    <div class="countdown-label" id="countdownLabel">
+        INFORMASI WAKTU PENDAFTARAN
+    </div>
+
+    <div class="countdown-status" id="countdownStatus">
+        Memuat waktu...
+    </div>
+
+    <div class="countdown" id="countdown">
+
+        <div class="time-box">
+            <span class="time-number" id="days">00</span>
+            <span class="time-label">HARI</span>
+        </div>
+
+        <div class="time-box">
+            <span class="time-number" id="hours">00</span>
+            <span class="time-label">JAM</span>
+        </div>
+
+        <div class="time-box">
+            <span class="time-number" id="minutes">00</span>
+            <span class="time-label">MENIT</span>
+        </div>
+
+        <div class="time-box">
+            <span class="time-number" id="seconds">00</span>
+            <span class="time-label">DETIK</span>
+        </div>
+
+    </div>
+
+    <div class="countdown-note" id="countdownNote">
+        Waktu mengikuti WIB
+    </div>
+
+</div>
+
+
+<!-- =========================
+     MENU SANGGAHAN
+========================= -->
+
+<div class="buttons">
+
+    <a
+        href="https://script.google.com/macros/s/AKfycbzpWZ4SRNZy8mzafmTeQOIXksd6bejZ0JSpYTUqApnpX80pnLSOyXlMeoTohkAbSYzoNA/exec"
+        class="btn btn-register"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        ⚖️ AJUKAN SANGGAHAN →
+    </a>
+
+    <div class="sanggahan-info">
+        Jika pelamar merasa sudah melakukan kelengkapan
+        persyaratan dan hasilnya belum sesuai,
+        silahkan isi disini.
+    </div>
+
+</div>
+
+
+<!-- =========================
+     TIMELINE
+========================= -->
+
+<div class="section-title">
+    📅 Timeline Pendaftaran
+</div>
+
+<div class="timeline-box">
+
+    <div class="timeline">
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                4 September 2026
+            </div>
+
+            <div class="timeline-name">
+                Pengumuman Pendaftaran
+            </div>
+
+            <div class="timeline-info">
+                Informasi resmi melalui media resmi RSUD dr. Soedarso.
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                4 – 11 September 2026
+            </div>
+
+            <div class="timeline-name">
+                Pelamar memasukkan berkas lamaran
+                (Seleksi Administrasi)
+            </div>
+
+            <div class="timeline-info">
+                Pendaftaran melalui link. Pukul 24.00 WIB pendaftaran ditutup.
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                5 – 12 September 2026
+            </div>
+
+            <div class="timeline-name">
+                Verifikasi dan Validasi Berkas
+            </div>
+
+            <div class="timeline-info">
+                Seleksi Administrasi — Tim Sekretariat Pansel.
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                14 September 2026
+            </div>
+
+            <div class="timeline-name">
+                Pengumuman Kelulusan Seleksi Administrasi
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                14 – 15 September 2026
+            </div>
+
+            <div class="timeline-name">
+                Masa Sanggah
+            </div>
+
+            <div class="timeline-info">
+                Pukul 16.00 WIB masa sanggah ditutup.
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                14 – 15 September 2026
+            </div>
+
+            <div class="timeline-name">
+                Jawab Sanggah
+            </div>
+
+            <div class="timeline-info">
+                Tim Sekretariat Pansel.
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                17 September 2026
+            </div>
+
+            <div class="timeline-name">
+                Pengumuman Kelulusan Seleksi Administrasi
+                dan Jadwal Pelaksanaan CAT
+            </div>
+
+            <div class="timeline-info">
+                Computer Assisted Test (CAT).
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                21 – 25 September 2026
+            </div>
+
+            <div class="timeline-name">
+                Pelaksanaan CAT
+                (Computer Assisted Test)
+            </div>
+
+            <div class="timeline-info">
+                Sesuai jadwal pelaksanaan CAT yang telah diumumkan.
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                28 September 2026
+            </div>
+
+            <div class="timeline-name">
+                Pengumuman Hasil CAT
+            </div>
+
+            <div class="timeline-info">
+                Termasuk penilaian administrasi dan kompetensi.
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                29 – 30 September 2026
+            </div>
+
+            <div class="timeline-name">
+                Pemeriksaan Kesehatan Jasmani dan Rohani
+            </div>
+
+            <div class="timeline-info">
+                Tim Sekretariat Pansel dan MCU.
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                2 Oktober 2026
+            </div>
+
+            <div class="timeline-name">
+                Pengumuman Kelulusan
+            </div>
+
+            <div class="timeline-info">
+                Tim Sekretariat Pansel.
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                5 Oktober 2026
+            </div>
+
+            <div class="timeline-name">
+                Pemberkasan
+            </div>
+
+            <div class="timeline-info">
+                Tim Sekretariat Pansel.
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                6 Oktober 2026
+            </div>
+
+            <div class="timeline-name">
+                Orientasi Umum
+            </div>
+
+            <div class="timeline-info">
+                Tim Sekretariat Pansel.
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                7 Oktober – 7 November 2026
+            </div>
+
+            <div class="timeline-name">
+                Orientasi Khusus
+            </div>
+
+            <div class="timeline-info">
+                Bagian/Bidang.
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     CATATAN
+========================= -->
+
+<div class="note">
+
+    <strong>ℹ️ Perhatian:</strong>
+    Peserta wajib membaca pengumuman resmi,
+    menyiapkan dokumen yang dipersyaratkan,
+    dan mengikuti seluruh tahapan sesuai jadwal.
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    © 2026 RSUD dr. Soedarso
+    <br>
+    Portal Pendaftaran Tenaga BLUD
+
+</footer>
+```
+
+</div>
 
 <!-- =========================
      JAVASCRIPT COUNTDOWN
@@ -1199,7 +1027,9 @@ function updateCountdown() {
 function tampilkanWaktu(jarak) {
 
     const hari =
-        Math.floor(jarak / (1000 * 60 * 60 * 24));
+        Math.floor(
+            jarak / (1000 * 60 * 60 * 24)
+        );
 
     const jam =
         Math.floor(
@@ -1236,12 +1066,10 @@ function tampilkanWaktu(jarak) {
 
 
 /* Jalankan langsung */
-
 updateCountdown();
 
 
 /* Perbarui setiap 1 detik */
-
 setInterval(updateCountdown, 1000);
 
 </script>
