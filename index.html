@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-
 <html lang="id">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -250,7 +250,7 @@ h1 {
 
 
 /* =========================
-   CEK HASIL VERIFIKASI
+   CETAK KARTU TES
 ========================= */
 
 .btn-register {
@@ -279,54 +279,6 @@ h1 {
 
     box-shadow:
         0 13px 28px rgba(11,94,215,.48);
-}
-
-
-/* =========================
-   AJUKAN SANGGAHAN
-========================= */
-
-.btn-sanggahan {
-
-    padding: 14px;
-
-    background: #EAF2FF;
-
-    border: 1px solid #BBD3F2;
-
-    color: #0B5ED7;
-
-    font-size: 13px;
-
-    font-weight: 700;
-}
-
-.btn-sanggahan:hover {
-
-    background: #DCEBFF;
-
-    transform: translateY(-2px);
-}
-
-.sanggahan-info {
-
-    margin-top: -2px;
-
-    padding: 9px 12px;
-
-    background: #F5F8FD;
-
-    border: 1px solid #DCE5F0;
-
-    border-radius: 10px;
-
-    color: #667085;
-
-    font-size: 8px;
-
-    line-height: 1.6;
-
-    text-align: center;
 }
 
 
@@ -539,10 +491,6 @@ footer {
         font-size: 14px;
     }
 
-    .btn-sanggahan {
-        font-size: 12px;
-    }
-
     .timeline-box {
         max-height: 350px;
     }
@@ -553,11 +501,12 @@ footer {
 
 </head>
 
+
 <body>
 
 <div class="container">
 
-```
+
 <!-- =========================
      LOGO
 ========================= -->
@@ -638,35 +587,16 @@ footer {
 
 <div class="buttons">
 
-
-    <!-- CEK HASIL VERIFIKASI -->
+    <!-- CETAK KARTU TES -->
 
     <a
-        href="https://script.google.com/macros/s/AKfycbwpU6mSfjguYjzWJgwt_t6D9KxL2vhJg8WtNa8kWXVhiHEvBsklxNJ-UGM2PTh8MxDovQ/exec"
+        href="https://script.google.com/macros/s/AKfycbyp3XdH_r475TfWL9TEA8Iq3Jzn4fz8TdBXIWW3c26-9GCGSYrDM_nnqtqjfnnlxaRQ/exec"
         class="btn btn-register"
         target="_blank"
         rel="noopener noreferrer"
     >
-        📝 CEK HASIL VERIFIKASI →
+        🎫 CETAK KARTU TES →
     </a>
-
-
-    <!-- AJUKAN SANGGAHAN -->
-
-    <a
-        href="https://script.google.com/macros/s/AKfycbzpWZ4SRNZy8mzafmTeQOIXksd6bejZ0JSpYTUqApnpX80pnLSOyXlMeoTohkAbSYzoNA/exec"
-        class="btn btn-sanggahan"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        ⚖️ AJUKAN SANGGAHAN →
-    </a>
-
-    <div class="sanggahan-info">
-        Jika pelamar merasa sudah melakukan kelengkapan
-        persyaratan dan hasilnya belum sesuai,
-        silahkan isi disini.
-    </div>
 
 </div>
 
@@ -933,6 +863,7 @@ footer {
 <div class="note">
 
     <strong>ℹ️ Perhatian:</strong>
+
     Peserta wajib membaca pengumuman resmi,
     menyiapkan dokumen yang dipersyaratkan,
     dan mengikuti seluruh tahapan sesuai jadwal.
@@ -951,9 +882,10 @@ footer {
     Portal Pendaftaran Tenaga BLUD
 
 </footer>
-```
+
 
 </div>
+
 
 <!-- =========================
      JAVASCRIPT COUNTDOWN
@@ -1073,17 +1005,20 @@ function tampilkanWaktu(jarak) {
             jarak / (1000 * 60 * 60 * 24)
         );
 
+
     const jam =
         Math.floor(
             (jarak % (1000 * 60 * 60 * 24))
             / (1000 * 60 * 60)
         );
 
+
     const menit =
         Math.floor(
             (jarak % (1000 * 60 * 60))
             / (1000 * 60)
         );
+
 
     const detik =
         Math.floor(
@@ -1108,13 +1043,16 @@ function tampilkanWaktu(jarak) {
 
 
 /* Jalankan langsung */
+
 updateCountdown();
 
 
 /* Perbarui setiap 1 detik */
+
 setInterval(updateCountdown, 1000);
 
 </script>
 
 </body>
+
 </html>
